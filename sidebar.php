@@ -18,9 +18,9 @@
       		<p class="mail">reserve ahora: <strong>info@gotoperu.com</strong></p>
       		
       	</header>
-      	<div>
-      		<h3>tours a machupicchu </h3>
-      	</div>
+      			<div>
+		      		<h3>tours a machupicchu en un dia:valle sagrado, pisaq</h3>
+		      	</div>
       	<div class="container ">
       		<div class="col-md-4 col-sm-12 full">
       			<section >
@@ -84,7 +84,42 @@
       				</ul>
       			</section>
       		</div>
-      		<div class="col-md-5 col-sm-12 ">
+      		<div class="col-md-8 col-sm-12 ">
+		      	<div>
+		      		<h3>Tour en el Valle Sagrado 1 día visita: Pisaq, Urubamba, Ollantaytambo y Chinchero</h3>
+		      	</div>
+		      	<div class="row">
+		      		<div>
+		      			<section class="paquete-lateral">
+		      				<div>
+		      					<h5 class="reservar">¿Deseas Reservar?</h5>
+		      					<a href="#" class="chatea">¡chatea ahora!  </a>
+		      				</div>
+		      			</section>
+		      		</div>
+		      		<div>
+		      			<section>
+		      				<p>
+		      					<img src="img/cusco.jpg" class="achicar-imagen" alt="">
+		      				</p>
+		      				<p>
+		      					<h5>nuestros paquetes a machupicchu incluyen</h5>
+		      					<ul id="listas-paquetes" >
+		      						<li>recojo al hotel </li>
+		      						<li>traslado a las estaciones de trenes</li>
+		      						<li>pasaje de tren hasta aguas calientes -machupicchu</li>
+		      					</ul>
+		      				</p>
+		      				<p>
+		      					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ea dicta obcaecati est sit consequatur quod cumque quia voluptates eius possimus nobis doloremque quidem dolore at, magnam reiciendis! Odit deserunt sunt nihil id sint. Commodi ab veritatis iste fugiat nemo alias incidunt ullam, ea nobis libero cum impedit eveniet vel delectus accusamus officia natus pariatur tempora officiis error at sit. Temporibus nam iure nulla impedit explicabo beatae ullam error expedita nihil necessitatibus accusantium culpa odit, officiis aliquid reprehenderit fuga voluptatibus, natus rem? Similique temporibus aliquam laborum accusantium dolor perspiciatis maxime. Sapiente deserunt tempora perferendis blanditiis est rem cupiditate, eaque, dolorum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, possimus?
+		      				</p>
+		      				<p>
+		      					<img src="img/cusco.jpg" alt="" class="imagen-parrafo">
+		      					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptas nihil repellat alias error corporis fugiat, laboriosam quisquam exercitationem ratione eaque accusantium totam obcaecati eveniet minus sed asperiores quia deleniti!
+		      				</p>
+		      			</section>
+		      		</div>
+		      	</div>
       		</div>
       	</div>
       </div>

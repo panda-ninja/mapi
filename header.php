@@ -25,6 +25,7 @@
 	            		999 888 777
 	            		<br>
 	            		999 888 777
+
 	            	</div>
 	            </div>
 	            </li>
@@ -55,7 +56,7 @@
 	 	            	<div class="col-md-2" id="ajustar-izquierda">
 	 	            		<img src="img/llamada.png" alt="" class="llamada">
 	 	            	</div>
-		            	<div class="col-md-10" id="ajustar-derecha">
+		            	<div class="col-md-10" id="ajustar-derecha ">
 		            		<strong class="agrandar">nosotros <br>te llamamos</strong>
 		            	</div>
 		            </div>

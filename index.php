@@ -24,8 +24,9 @@
 	 </div>
       <div class="main">
       	<header id="header" role="banner" class="">
-
-      		<img src="img/tripadvisor.png" alt="" class="img-responsive imagen">
+      		<div class="trip">
+	      		<img src="img/tripadvisor.png" alt="" class="img-responsive imagen">
+      		</div>
       		<p class="mail">reserve ahora: <strong>info@gotoperu.com</strong></p>
       		
       	</header>
@@ -104,16 +105,33 @@
       					<h4 class="titulo-noticia"><a href="#">Locomotoras especiales para la ruta de machupicchu</a></h4>
       					<p class="fecha-noticia">26 diciembre del 2016</p>
       					<p>"El operador ferroviario encargado del transporte de pasajeros desde la ciudad de Cusco hasta Machupicchu, viene elaborando un plan donde los puntos más relevantes es el de ofrecer un mejor servicio para los usuarios, así como el de ofrecer un servicio más ecológico y amigable con la naturaleza...  "<a href="#">Leer mas...</a></p>
+      					<ul class="noticias-face">
+      					<li class="compartir-noticia" >
+							<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fgotoperu.com%2F&width=143&layout=button&action=like&size=small&show_faces=true&share=true&height=65&appId" width="143" height="19" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+						</li>
+						</ul>
       				</article>
+      				<div>
       				<article class="noticias">
       					<h4 class="titulo-noticia"><a href="#">Locomotoras especiales para la ruta de machupicchu</a></h4>
       					<p class="fecha-noticia">26 diciembre del 2016</p>
       					<p>"El operador ferroviario encargado del transporte de pasajeros desde la ciudad de Cusco hasta Machupicchu, viene elaborando un plan donde los puntos más relevantes es el de ofrecer un mejor servicio para los usuarios, así como el de ofrecer un servicio más ecológico y amigable con la naturaleza...  "<a href="#">Leer mas...</a></p>
+      					<ul class="noticias-face">
+      					<li class="compartir-noticia" >
+							<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fgotoperu.com%2F&width=143&layout=button&action=like&size=small&show_faces=true&share=true&height=65&appId" width="143" height="19" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+						</li>
+						</ul>
       				</article>
+      				</div>
       				<article class="noticias">
       					<h4 class="titulo-noticia"><a href="#">Locomotoras especiales para la ruta de machupicchu</a></h4>
       					<p class="fecha-noticia">26 diciembre del 2016</p>
       					<p>"El operador ferroviario encargado del transporte de pasajeros desde la ciudad de Cusco hasta Machupicchu, viene elaborando un plan donde los puntos más relevantes es el de ofrecer un mejor servicio para los usuarios, así como el de ofrecer un servicio más ecológico y amigable con la naturaleza...  "<a href="#">Leer mas...</a></p>
+      					<ul class="noticias-face">
+      					<li class="compartir-noticia" >
+							<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fgotoperu.com%2F&width=143&layout=button&action=like&size=small&show_faces=true&share=true&height=65&appId" width="143" height="19" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+						</li>
+						</ul>
       				</article>
       			</section>
       		</div>
@@ -158,6 +176,11 @@
       				<hr>
       				<p class="centrado">
       					<a href="#">miles de testimonios mas...</a>
+      				</p>
+      			</section>
+      			<section>
+      				<p>
+      					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGOTOPERUcom%2F%3Ffref%3Dts&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
       				</p>
       			</section>
       		</div>
