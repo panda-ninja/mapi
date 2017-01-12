@@ -39,8 +39,9 @@
       			<section >
       				<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>
       				<ul id="listas" class="full">
+                                    
       					<li>
-      						<a href="sidebar.php">Tours a machupicchu en un dia:valle  sagrado, pisaq, qenqoro</a>
+      						<a href="sidebar.php">Tour 5 Dias Clasico Inca:Cusco City Tour , Valle Sagrado, Machupicchu</a>
       					</li>
       					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
       					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
