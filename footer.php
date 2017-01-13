@@ -11,7 +11,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<ul class="listas-blancas">
-						<li><a href="#">Destinos a Peru</a></li>
+						<li><a href="destinos.php">Destinos a Peru</a></li>
 						<li><a href="#">Aerolineas a Peru</a></li>
 						<li><a href="#">Hoteles en Peru</a></li>
 						

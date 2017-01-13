@@ -176,7 +176,7 @@
       				</div>
       				<hr>
       				<p class="centrado">
-      					<a href="#">miles de testimonios mas...</a>
+      					<a href="testimonios.php">miles de testimonios mas...</a>
       				</p>
       			</section>
       			<section>

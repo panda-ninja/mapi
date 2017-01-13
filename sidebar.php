@@ -115,7 +115,7 @@
                               </div>
                               <hr>
                               <p class="centrado">
-                                    <a href="#">miles de testimonios mas...</a>
+                                    <a href="testimonios.php">miles de testimonios mas...</a>
                               </p>
                         </section>
       		</div>
@@ -137,9 +137,6 @@
 		      		</div>
 		      		<div>
 		      			<section class="pading-left">
-		      				<p>
-		      					<img src="img/cusco.jpg" class="achicar-imagen" alt="">
-		      				</p>
 		      				<p>
 		      					<h5 class="subtitulo-paquete">Primer Dia: Llegada al Cusco</h5>
                                                 <p>

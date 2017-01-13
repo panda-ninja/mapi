@@ -438,3 +438,50 @@ table{
 	color: #70A66C;
 
 }
+.destinos-marco{
+	padding: 5px 5px 5px 10px;
+	border-radius: 0px 8px 8px 8px;
+	border:3px double #ABB193;
+	margin-bottom: 5px;
+
+}
+.destinos-marco h5{
+	font-family: sans-serif;
+	font-weight: medium;
+	font-size: 20px;
+	color: #70A66C;
+}
+.imagen-peru{
+	width: 78%;
+	margin-bottom: 5px;
+}
+
+.testimonio-caja{
+	float: right;
+	text-align: justify;
+	margin: 5px 0px 5px 0px;
+	padding: 15px;
+
+}
+.testimonio-caja h5{
+	text-align: right;
+	font-family: italic;
+	font-size: 10px;
+
+}
+.testimonio-caja p{
+
+	font:  bold italic;
+
+	line-height: 24px;
+	color: #464936;
+	letter-spacing: .2px;
+	margin-bottom: .7em;
+}
+.testimonio-seleccionado{
+	margin: 15px;
+}
+.testimonio-seleccionado:hover{
+	transform: scale(1.0155);
+	transition: 0.5s ease;
+}
