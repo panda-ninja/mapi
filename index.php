@@ -1,3 +1,10 @@
+<?php include('include/funciones.php'); ?>
+<?php include('conexion.php');
+$con=conectar();
+      $datos= "SELECT * FROM tpaquetes";
+      $tabla = $con->query($datos);
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +13,13 @@
 	<title>gotoperu</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+
 </head>
 <body class="fondo">
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
+	  var js, fjs = d.getElementsByTagName(s)[0];     
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
 	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
@@ -19,45 +28,49 @@
 
 <div class="container encima">
 	<?php include("header.php"); ?>
-	 <div class="hidden-xs hidden-sm relleno-cabecera">
+<!--	 <div class="hidden-xs hidden-sm relleno-cabecera">
 	 	
-	 </div>
+	 </div>-->
       <div class="main">
+                  <div class="trip">
+                        <p >PERU 51.84.262.555     COLOMBIA 57.5641.4644       CHILE 53.414.144479      ECUADOR 531.47.87499009      MEXICO 87.4.9874411</p>
+                  </div>
       	<header id="header" role="banner" class="">
-      		<div class="trip">
-	      		<img src="img/tripadvisor.png" alt="" class="img-responsive imagen">
+                  <div class="row">
+      		    <i class="bloque-iconos col-md-8 col-sm-8 col-xs-8"> <img src="img/1.png" alt="" class="icono-portada img-responsive"><img src="img/2.png" alt="" class="icono-portada img-responsive"><img src="img/3.png" alt="" class="icono-portada img-responsive"><img src="img/4.png" alt="" class="icono-portada img-responsive"><img src="img/5.png" alt="" class="icono-portada img-responsive"><img src="img/6.png" alt="" class="icono-portada img-responsive"><img src="img/7.png" alt="" class="icono-portada img-responsive"><img src="img/8.png" alt="" class="icono-portada img-responsive"></i>
       		</div>
-      		<p class="mail">reserve ahora: <strong>info@gotoperu.com</strong></p>
-      		
       	</header>
       	<div>
-      		<h3 class="titulo-principal">TOURS A MACHUPICCHU - VIAJES A CUSCO</h3>
+      		<h3 class="titulo-principal">PAQUETES TURISTICOS A MACHUPICCHU Y PERU TOURS</h3>
       		
       	</div>
       	<div class="container ">
       		<div class="col-md-7 col-sm-12 full">
       			<section >
-      				<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>
+      				<!--<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>-->
       				<ul id="listas" class="full">
-                                    
-      					<li>
-      						<a href="sidebar.php">Tour 5 Dias Clasico Inca:Cusco City Tour , Valle Sagrado, Machupicchu</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                                    <?php
 
+                                    while ($user =mysqli_fetch_array($tabla) )
+                                    {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].'</a>';
+                                    }
+
+                                     ?>
       				</ul>
       			</section>
       			<section >
       				<h5 class="subtitulos">Tours en todo el peru</h5>
       				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                                    <?php foreach ($toursperu as $tourperu) {?>
+                                          
+                                    
+                                    <li>
+                                          <a href="sidebar.php"><?php echo $tourperu["nombre"]; ?></a>
+                                    </li>
+
+                                    <?php } ?>
 
       				</ul>
       			</section>
@@ -138,7 +151,7 @@
       		</div>
       		<div class="col-md-5 col-sm-12 ">
       			<section>
-      				<h5 class="subextra"> nuestra empresa es reconocida a nivel nacional</h5>
+      				<!--<h5 class="subextra"> nuestra empresa es reconocida a nivel nacional</h5>-->
       				<div class="orden">
       					<iframe width="100%" height="248" src="https://www.youtube.com/embed/Chq4BnQNUkw" frameborder="0" allowfullscreen></iframe>
       				</div>

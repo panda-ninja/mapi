@@ -3,78 +3,38 @@
 	        <nav>
 	          <ul class="nav nav-justified me">
 	            <li class="chat centrado">
-	            <div class="row">
-	            	<div class="col-md-4" id="ajustar-izquierda">
-	            		<img src="img/fono.png" alt="" class=" img-responsive largo">
-	            	</div>
-	            	<div class="col-md-8 margin-8 " id="ajustar-derecha">
-	            		chatea con
-	            		<br>
-	            		nosotros
-	            	</div>
-	            </div>
-	            </li>
-	            <li class="llamanos centrado">
-	            <div class="row">
-	            	<div class="col-md-4" id="ajustar-izquierda">
-	            		<img src="img/fono.png" alt="" class=" img-responsive largo">
-	            	</div>
-	            	<div class="col-md-8 margin-2" id="ajustar-derecha">
-	            		llamanos
-	            		<br>
-	            		999 888 777
-	            		<br>
-	            		999 888 777
+	            <img src="img/logo2.jpg" alt="" class=" img-responsive imagen-logo">
 
-	            	</div>
-	            </div>
+	            </li>
+	            <li class="chat centrado">
+	            <img src="img/logo.png" alt="" class=" img-responsive largo">
+
 	            </li>
 	            <li class="llamanos centrado">
 	            <div class="row">
+
 	            	<div class="col-md-12 margin-2">
-	            		reserve las 24 horas
-	            		<br>
-	            		info@gotoperu.com
-	            		<br>
-	            		info@gotoperu.com
-	            	</div>
-	            </div>
-	            </li>
-	            <li class="llamanos centrado">
-	            <div class="row">
-	            	<div class="col-md-12 margin-2">
-	            		reserve las 24 horas
-	            		<br>
-	            		info@gotoperu.com
-	            		<br>
-	            		info@gotoperu.com
-	            	</div>
-	            </div>
-	            </li>
-	            <li  class=" llamar palabra">
-	 	            <div class="row ">
-	 	            	<div class="col-md-2" id="ajustar-izquierda">
-	 	            		<img src="img/llamada.png" alt="" class="llamada">
-	 	            	</div>
-		            	<div class="col-md-10" id="ajustar-derecha ">
-		            		<strong class="agrandar">nosotros <br>te llamamos</strong>
+	            		<div class="border-left">
+		            		<label class="espacio" >Operadores locales</label>
+		            		<label class="espacio" >Cotizaciones sin compromiso</label>
+		            		<label class="espacio" >Salidas Diarias</label><br>
+		            		<label class="espacio" >10 años de experiencia</label>
+		            		<label class="espacio" >Sede central en Cusco</label>
 		            	</div>
-		            </div>
+	            	</div>
+	            </div>
 	            </li>
 	            <li class="llamar centrado">
 	            	<div class="row">
-	            		<div class="col-md-4" id="margen">
-	            			<img src="img/brazil.png" alt="" class="banderas">
-	            			<img src="img/eeuu.png" alt="" class="banderas">
+	            		<div class="col-md-6" id="margen">
+	            			<button type='button' class='btn btn-info cabecera-boton'><i class="fa fa-commenting-o" aria-hidden="true"></i>  CHAT</button>
+	            			<button type='button' class="btn btn-danger">CONSULTAS</button>
 	            		</div>
-		            	<div class="col-md-8 margin-15 paises">
-		            		
-		            		
-		            		BR
-		            		<br>
-		            		EN
+		            	<div class="col-md-6 margin-15 paises">
+		            		<img src="img/foto.jpg" alt="" class="foto-cabecera">
 		            	</div>
 	            	</div>
+	            	<p class="correo-cabecera">info@machupicchu.company</p>
 	            </li>
 	            
 	          </ul>

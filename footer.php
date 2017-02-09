@@ -30,7 +30,7 @@
 			<h5 class="footer-titulo">SIGUENOS</h5>
 			<hr>
 			<ul class="listas-blancas">
-				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts">facebook</a></li>
+				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts" target="_blank">facebook</a></li>
 				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts">twiter</a></li>
 				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts">instagram</a></li>
 			</ul>

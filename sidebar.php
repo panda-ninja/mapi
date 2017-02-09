@@ -1,3 +1,15 @@
+<?php include('include/funciones.php'); ?>
+<?php include('conexion.php');
+$con=conectar();
+$paquete_id=$_GET["id"];
+$tabla="SELECT idpaquetes,codigo,titulo,duracion,descripcion,incluye,noincluye,opcional,imagen,fecha,estado FROM tpaquetes WHERE idpaquetes='$paquete_id'";
+
+$paquete_lista = mysqli_query($con,$tabla);
+
+$fila=mysqli_fetch_array($paquete_lista);
+
+//$paquete_lista = $con->query($tabla);
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +39,7 @@
       		
       	</header>
       			<div>
-		      		<h3>Tour 5 Dias Clasico Inca:Cusco City Tour , Valle Sagrado, Machupicchu</h3>
+		      		<h3><?php echo $fila["titulo"]; ?></h3>
 		      	</div>
       	<div class="container ">
       		<div class="col-md-4 col-sm-12 full">
@@ -120,9 +132,7 @@
                         </section>
       		</div>
       		<div class="col-md-8 col-sm-12 ">
-		      	<div>
-		      		<h3>Tour 5 Dias Clasico Inca:Cusco City Tour , Valle Sagrado, Machupicchu</h3>
-		      	</div>
+
 		      	<div class="row">
 		      		<div >
 		      			<section class="paquete-lateral">
@@ -137,6 +147,17 @@
 		      		</div>
 		      		<div>
 		      			<section class="pading-left">
+                                          <p>
+                                             <?php 
+                                                for ($i=1; $i <= $fila["duracion"]; $i++) { 
+                                                      $tabla2="SELECT iditinerario,dia,titulo,descripcion,imagen,idpaquetes FROM titinerario WHERE idpaquetes='$paquete_id' AND dia='$i'";
+                                                      $paquete_lista2 = mysqli_query($con,$tabla2);
+                                                      $fila2=mysqli_fetch_array($paquete_lista2);
+
+                                                      detalles($fila2);
+                                                }
+                                              ?>   
+                                          </p>
 		      				<p>
 		      					<h5 class="subtitulo-paquete">Primer Dia: Llegada al Cusco</h5>
                                                 <p>
