@@ -16,7 +16,7 @@ $con=conectar();
       <link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>
-<body class="fondo">
+<body class=" marca-agua2">
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];     
@@ -26,7 +26,10 @@ $con=conectar();
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="container encima">
+<!--<div>
+      <img src="img/logo-pequeño" alt="" class="marca-agua">
+</div>-->
+<div class="container encima ">
 	<?php include("header.php"); ?>
 <!--	 <div class="hidden-xs hidden-sm relleno-cabecera">
 	 	

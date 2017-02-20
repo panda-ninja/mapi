@@ -19,7 +19,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="fondo">
+<body class="marca-agua2">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -34,7 +34,7 @@ $fila=mysqli_fetch_array($paquete_lista);
       <div class="main">
       	<header id="header" role="banner" class="">
 
-      		<img src="img/tripadvisor.png" alt="" class="img-responsive imagen">
+      		
       		<p class="mail">reserve ahora: <strong>info@gotoperu.com</strong></p>
       		
       	</header>
@@ -149,16 +149,16 @@ $fila=mysqli_fetch_array($paquete_lista);
 		      			<section class="pading-left">
                                           <p>
                                              <?php 
+
                                                 for ($i=1; $i <= $fila["duracion"]; $i++) { 
                                                       $tabla2="SELECT iditinerario,dia,titulo,descripcion,imagen,idpaquetes FROM titinerario WHERE idpaquetes='$paquete_id' AND dia='$i'";
                                                       $paquete_lista2 = mysqli_query($con,$tabla2);
                                                       $fila2=mysqli_fetch_array($paquete_lista2);
-
                                                       detalles($fila2);
                                                 }
                                               ?>   
                                           </p>
-		      				<p>
+		      				<!--<p>
 		      					<h5 class="subtitulo-paquete">Primer Dia: Llegada al Cusco</h5>
                                                 <p>
                                                       Un representante autorizado de GOTOPERU le dará la bienvenida en el aeropuerto y lo llevará a su hotel seleccionado en Cusco.
@@ -248,22 +248,12 @@ $fila=mysqli_fetch_array($paquete_lista);
 		      					
 		      					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptas nihil repellat alias error corporis fugiat, laboriosam quisquam exercitationem ratione eaque accusantium totam obcaecati eveniet minus sed asperiores quia deleniti!
                                                 
-		      				</p>
-                                          <h4>Nuestro paquete incluye:</h4>
-                                          <ul id="listas2">
-                                                <li>hoteles</li>
-                                                <li>Todas las excursiones indicadas en el itinerario con guías de habla español o Inglés</li>
-                                                <li>Todas las entradas</li>
-                                                <li>Todos los desayunos</li>
-                                                <li>Traslado privado de traslado de entrada y salida</li>
-                                                <li>24/7 Asistencia</li>
-                                                <li>Los trenes y autobuses</li>
-                                          </ul>
-                                          <h4>Nuestro paquete NO incluye:</h4>
-                                                <ul id="listas2">
-                                                      <li>Vuelos Internos</li>
-                                                      <li>Almuerzos o Cena</li>
-                                                </ul>
+		      				</p>-->
+                                          
+                                          <?php 
+                                                incluye($fila);
+                                          ?> 
+
                                           <h3>precio por persona segun tipo de hotel:</h3>
 
                                           <table class="tabla-precio">
@@ -360,17 +350,11 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                       </tr>
                                                 </tbody>
                                           </table>
-                                          <h4>Actividades opcionales:
-                                          <p>Comunicar a su consultor de viaje para adicionar estas opciones</p></h4>
-                                          <ul id="listas2">
-                                                <li>Rafting</li>
-                                                <li>Paseo a caballo</li>
-                                                <li>ATVs</li>
-                                                <li>Zip Line &ViaFerrata</li>
-                                                <li>Planetarium Cusco</li>
-                                                <li>Cursos de Gastronomia</li>
-                                                <li>Mountain Biking</li>
-                                          </ul>
+                                          <?php 
+                                                opcional($fila);
+                                          ?> 
+
+
 
                                           <div class="fb-comments" data-href="https://www.facebook.com/GOTOPERUcom/?fref=ts" data-numposts="5"></div>
 		      			</section>
