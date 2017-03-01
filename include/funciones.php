@@ -18,7 +18,6 @@ function detalles($fila){
       //echo '<div class="parallax-container "> <div class="parallax valign-wrapper">';
       //echo '<img src="img/'.$fila["imagen"].'" alt style="display: block; transform: translate3d(-50%, 63px, 0px);">';
       //echo '</div></div>';
-      //echo '<div class="cambio" style="background-image: url("../img/valle-sagrado.jpg");      height: 200px;"></div>';
       echo $fila["descripcion"];    
 
 }   

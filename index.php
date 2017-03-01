@@ -164,9 +164,7 @@ $con=conectar();
       				<div class="orden">
       					<iframe width="100%" height="248" src="https://www.youtube.com/embed/Chq4BnQNUkw" frameborder="0" allowfullscreen></iframe>
       				</div>
-      				<div class="orden">
-      					<iframe width="100%" height="248" src="https://www.youtube.com/embed/Chq4BnQNUkw" frameborder="0" allowfullscreen></iframe>
-      				</div>
+
       			</section>
       			<section>
       				<h5 class="subextra"> opiniones de nuestros pasajeros</h5>
