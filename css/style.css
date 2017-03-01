@@ -57,8 +57,8 @@ background-position: 10px 20px;
 
 }
 .foto-cabecera{
-	width: 120px;
-	margin-top: 5px;
+	width: 110px;
+	margin-top: 8px;
 	left: 0px;
 }
 .cabecera-boton{
@@ -69,6 +69,7 @@ background-position: 10px 20px;
 .correo-cabecera{
 	color: #DB691D;
 	font-size: 18px;
+	margin-bottom: 0px !important;
 }
 header{
 	background: url(../img/header.jpg);
@@ -252,8 +253,12 @@ h3{
 }
 
 footer{
-	background: #166A16;
-	padding-bottom: 30px;
+	background-image: url(../img/footer2.jpg);
+	background-size: cover;
+	padding-bottom: 120px;
+}
+.margin-top-footer{
+	padding-top: 100px;
 }
 hr {border: 2px solid khaki; height: 2px; background-color: darkkhaki;
 }
@@ -431,6 +436,12 @@ ul li{
 }
 .marcador{
 	list-style: none;
+}
+#link-sin-borde{
+	max-width: 100%;
+}
+.margenes{
+	padding: 5px 10px !important;
 }
 .mensaje-alerta{
 	background-color: #EDE8BE;

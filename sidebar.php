@@ -266,13 +266,13 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 </thead>
                                                 <tbody>
                                                       <tr>
-                                                            <td>usd 688</td>
-                                                            <td>s/.2 300</td>
+                                                            <td>usd </td>
+                                                            <td>s/.</td>
                                                             <td>hotel 2 estrellas: Lorem ipsum dolor sit amet.</td>
                                                       </tr>
                                                       <tr>
-                                                            <td>usd 799</td>
-                                                            <td>s/.2 600</td>
+                                                            <td>usd </td>
+                                                            <td>s/.</td>
                                                             <td>hotel 3 estrellas: Lorem ipsum dolor sit.</td>
                                                       </tr>
                                                       <tr>
@@ -299,8 +299,8 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 <tbody>
                                                       <tr>
                                                             <td>De Tren Expedition (Categoria Turistica) Para Tren Vistadome (Clase Turistica Superior)</td>
-                                                            <td>usd 25</td>
-                                                            <td>s/.83.00</td>
+                                                            <td>usd</td>
+                                                            <td>s/.</td>
                                                             
                                                       </tr>
                                                      

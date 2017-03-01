@@ -1,38 +1,27 @@
 <footer>
-	<div class="container">
-		<div class="col-md-4">
+	<div class="container margin-top-footer">
+		<div class="col-md-3">
+
+		</div>
+		<div class="col-md-3">
 			<h5 class="footer-titulo">GOTOPERU</h5>
 			<hr>
 			<p class="letra-blanca"><strong class="letra-negra">E-mail:</strong> info@gotoperu.com <br> <strong class="letra-negra">Nuestros Telefonos:</strong>999999999 - 99999999</p>
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-3">
 			<h5 class="centro footer-titulo">MACHUPICCHU LO ESPERA</h5>
 			<hr>
-			<div class="row">
-				<div class="col-md-6">
-					<ul class="listas-blancas">
-						<li><a href="destinos.php">Destinos a Peru</a></li>
-						<li><a href="#">Aerolineas a Peru</a></li>
-						<li><a href="#">Hoteles en Peru</a></li>
-						
-					</ul>
-				</div>
-				<div class="col-md-6">
-					<ul class="listas-blancas">
-						<li><a href="#">Entradas a Machupicchu</a></li>
-						<li></li>
-						<li></li>
-					</ul>
-				</div>
-			</div>
+			<li><a href="destinos.php">Destinos a Peru</a></li>
+
+
 		</div>
 		<div class="col-md-3">
 			<h5 class="footer-titulo">SIGUENOS</h5>
 			<hr>
 			<ul class="listas-blancas">
-				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts" target="_blank">facebook</a></li>
-				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts">twiter</a></li>
-				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts">instagram</a></li>
+				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i>facebook</a></li>
+				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts"><i class="fa fa-twitter" aria-hidden="true"></i>twiter</a></li>
+				<li><a href="https://www.facebook.com/GOTOPERUcom/?fref=ts"><i class="fa fa-instagram" aria-hidden="true"></i>instagram</a></li>
 			</ul>
 		</div>
 	</div>
