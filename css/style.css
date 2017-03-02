@@ -255,12 +255,20 @@ h3{
 footer{
 	background-image: url(../img/footer2.jpg);
 	background-size: cover;
-	padding-bottom: 120px;
+	padding-bottom: 50px;
 }
 .margin-top-footer{
 	padding-top: 100px;
 }
 hr {border: 2px solid khaki; height: 2px; background-color: darkkhaki;
+}
+.footer-link:link{
+	text-decoration: none;
+
+}
+.footer-link h5{
+	font-size: 1.5em;
+	color: #645454;
 }
 .centro{
 	text-align: center;
@@ -316,15 +324,26 @@ background-color: #222;
 .letra-negra{
 	color: #000000;
 }
+.espacio-10px{
+	margin-top: 10px;
+}
 .letra-blanca{
 	color: #FFFFFF;
+	font-size: 1.5em;
+}
+.letra-blanca i{
+	margin-right: 5px;
 }
 .listas-blancas li a{
 	color: #ffffff;
 	
 }
+.listas-blancas{
+	font-size: 1.5em;
+}
 .listas-blancas li{
 	list-style: none;
+
 }
 .largo{
 	padding-top: 5px;
