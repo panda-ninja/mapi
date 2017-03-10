@@ -15,7 +15,7 @@ background-color: rgba(0,0,0,0.5);
 }
 .marca-agua2{
 background-image: url(../img/logo-pequeño.png);
-background-size: 10% 5%;
+/*background-size: 10% 5%;*/
 background-position: 10px 20px;
 
 }
@@ -255,7 +255,7 @@ h3{
 footer{
 	background-image: url(../img/footer2.jpg);
 	background-size: cover;
-	padding-bottom: 50px;
+	padding-bottom: 1px;
 }
 .margin-top-footer{
 	padding-top: 100px;
@@ -268,7 +268,7 @@ hr {border: 2px solid khaki; height: 2px; background-color: darkkhaki;
 }
 .footer-link h5{
 	font-size: 1.5em;
-	color: #645454;
+	color: #cacc2d;
 }
 .centro{
 	text-align: center;
@@ -313,6 +313,7 @@ hr {border: 2px solid khaki; height: 2px; background-color: darkkhaki;
 	/*position: fixed;*/
 		z-index:1000;
 }
+
 .isStuck {
 width: 100%;
 position: fixed;
@@ -324,8 +325,21 @@ background-color: #222;
 .letra-negra{
 	color: #000000;
 }
-.espacio-10px{
-	margin-top: 10px;
+.espacio-20px{
+	margin-top: 20px;
+}
+.espacio-20px ul{
+	align-content: center;
+	align-items: center;
+	text-align: center;
+}
+.espacio-20px ul li{
+	display: inline-block;
+	color: #8B4444;
+}
+.espacio-20px ul li i{
+	color: #fff;
+	margin: 4px;
 }
 .letra-blanca{
 	color: #FFFFFF;
@@ -458,6 +472,9 @@ ul li{
 }
 #link-sin-borde{
 	max-width: 100%;
+}
+.margenes:hover{
+	background-color: rgba(255, 255, 255, 0) !important;
 }
 .margenes{
 	padding: 5px 10px !important;

@@ -2,7 +2,9 @@
 <?php include('conexion.php');
 $con=conectar();
 $paquete_id=$_GET["id"];
-$tabla="SELECT idpaquetes,codigo,titulo,duracion,descripcion,incluye,noincluye,opcional,imagen,fecha,estado FROM tpaquetes WHERE idpaquetes='$paquete_id'";
+$tabla="SELECT * FROM tpaquetes WHERE idpaquetes='$paquete_id'";
+$datos= "SELECT * FROM tpaquetes";
+$tabla2 = $con->query($datos);
 
 $paquete_lista = mysqli_query($con,$tabla);
 
@@ -35,14 +37,27 @@ $fila=mysqli_fetch_array($paquete_lista);
       	<header id="header" role="banner" class="">
 
       		
-      		<p class="mail">reserve ahora: <strong>info@gotoperu.com</strong></p>
+      		
       		
       	</header>
-      			<div>
-		      		<h3><?php echo $fila["titulo"]; ?></h3>
-		      	</div>
+      		<div>
+      	     		<h3><?php echo $fila["titulo"]; ?></h3>
+		    	</div>
       	<div class="container ">
+
       		<div class="col-md-4 col-sm-12 full">
+                        <section >
+                        <!--<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>-->
+                              <ul id="listas" class="full">
+                                    <?php
+                                    while ($user =mysqli_fetch_array($tabla2) )
+                                    {
+                                          echo '<li>';
+                                          echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].'</a>';
+                                    }
+                               ?>
+                              </ul>
+                        </section>
       			<section >
       				<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>
       				<ul id="listas" class="full">

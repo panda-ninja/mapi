@@ -3,6 +3,7 @@
 $con=conectar();
       $datos= "SELECT * FROM tpaquetes";
       $tabla = $con->query($datos);
+      //"INSERT INTO titinerario(dia,titulo,descripcion,imagen,idpaquetes)"
  ?>
 
 <!DOCTYPE html>
