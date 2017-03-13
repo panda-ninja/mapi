@@ -1,7 +1,7 @@
 <?php include('include/funciones.php'); ?>
 <?php include('conexion.php');
 $con=conectar();
-      $datos= "SELECT * FROM tpaquetes";
+      $datos= "SELECT * FROM tpaquetes WHERE estado!=0";
       $tabla = $con->query($datos);
       //"INSERT INTO titinerario(dia,titulo,descripcion,imagen,idpaquetes)"
  ?>
@@ -58,7 +58,7 @@ $con=conectar();
                                     while ($user =mysqli_fetch_array($tabla) )
                                     {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].'</a>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
                                     }
 
                                      ?>

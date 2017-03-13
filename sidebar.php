@@ -3,7 +3,7 @@
 $con=conectar();
 $paquete_id=$_GET["id"];
 $tabla="SELECT * FROM tpaquetes WHERE idpaquetes='$paquete_id'";
-$datos= "SELECT * FROM tpaquetes";
+$datos= "SELECT * FROM tpaquetes WHERE estado!=0";
 $tabla2 = $con->query($datos);
 
 $paquete_lista = mysqli_query($con,$tabla);
@@ -53,7 +53,7 @@ $fila=mysqli_fetch_array($paquete_lista);
                                     while ($user =mysqli_fetch_array($tabla2) )
                                     {
                                           echo '<li>';
-                                          echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].'</a>';
+                                          echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
                                     }
                                ?>
                               </ul>
