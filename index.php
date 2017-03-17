@@ -1,9 +1,16 @@
 <?php include('include/funciones.php'); ?>
 <?php include('conexion.php');
 $con=conectar();
-      $datos= "SELECT * FROM tpaquetes WHERE estado!=0";
+      $datos= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0";
       $tabla = $con->query($datos);
       //"INSERT INTO titinerario(dia,titulo,descripcion,imagen,idpaquetes)"
+      //$datosci="SELECT idpaquetes FROM tpaquetescategoria ";
+      $datosci="SELECT P.idpaquetes FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0";
+      $tablaci=$con->query($datosci);
+      $datoscif="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='3' and P.estado!=0";//buscamos
+      $tablacif=$con->query($datoscif);
+      $datoscic="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='2' and P.estado!=0";
+      $tablacic=$con->query($datoscic);
  ?>
 
 <!DOCTYPE html>
@@ -54,7 +61,8 @@ $con=conectar();
       				<!--<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>-->
       				<ul id="listas" class="full">
                                     <?php
-
+                                    $user2 =mysqli_fetch_array($tablaci);
+                                    $a =$user2["idpaquetes"];
                                     while ($user =mysqli_fetch_array($tabla) )
                                     {
                                                 echo '<li>';
@@ -65,40 +73,29 @@ $con=conectar();
       				</ul>
       			</section>
       			<section >
-      				<h5 class="subtitulos">Tours en todo el peru</h5>
+      				<h5 class="subtitulos">Camino Inca a Machu Picchu</h5>
       				<ul id="listas" class="full">
-                                    <?php foreach ($toursperu as $tourperu) {?>
-                                          
+                                    <?php
+                                    while ( $user3 =mysqli_fetch_array($tablacif)) 
+                                    {
+                                          echo '<li>';
+                                          echo '<a href="sidebar.php?id='.$user3["idpaquetes"].'">'.$user3["titulo"].' - ('.$user3["duracion"].' dias)</a>';
+                                    }
                                     
-                                    <li>
-                                          <a href="sidebar.php"><?php echo $tourperu["nombre"]; ?></a>
-                                    </li>
-
-                                    <?php } ?>
-
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en Sudamerica</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                                    ?>
 
       				</ul>
       			</section>
       			<section >
       				<h5 class="subtitulos">Tours en Cusco</h5>
       				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                                    <?php
+                                    while ( $user4 =mysqli_fetch_array($tablacic)) 
+                                    {
+                                          echo '<li>';
+                                          echo '<a href="sidebar.php?id='.$user4["idpaquetes"].'">'.$user4["titulo"].' - ('.$user4["duracion"].' dias)</a>';
+                                    }
+                                    ?>
  
       				</ul>
       			</section>
