@@ -122,7 +122,7 @@ h3{
 	text-align: left ; /*alineación del texto*/
 	text-transform: uppercase; /*texto se transforma en mayúsculas*/
 	padding: 2px;  /*tamaño del fondo*/
-	border-radius: 15px 0px 15px 0px; /*forma la borde del fondo*/
+	border-radius:7px 7px 0px 0px; /*forma la borde del fondo*/
 	padding-left: 10px;
 }
 .subextra{
@@ -496,7 +496,10 @@ ul li{
 	margin-bottom: 10px;
 	border-spacing: 0;
 }
-thead th{
+table{
+	margin-bottom: 0px !important;
+}
+.tabla-precio thead th{
 	text-align: center !important;
 	background: #ff5722;
 	color: #8bc34a;
@@ -505,7 +508,7 @@ thead th{
 	padding: 2px 4px !important;
 	border-collapse: collapse;
 }
-tbody td{
+.tabla-precio tbody td{
 	font-size: 11px;
 	font-weight: bold;
 	border: 1px solid #ff9800 !important;
@@ -514,9 +517,7 @@ tbody td{
 	
 	font-size: 100%;
 }
-table{
-	width: 99%;
-}
+
 .pading-left{
 	padding-left: 15px;
 }
@@ -668,4 +669,13 @@ img.codepen_image {
     transform: translate3d(0, 0, 0);
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+.subpagina{
+	color: #1e2225;
+}
+.subpagina:link{
+	text-decoration: none;
+}
+.subpagina:hover{
+	text-decoration: none;
 }

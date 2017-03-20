@@ -2,15 +2,25 @@
 <?php include('conexion.php');
 $con=conectar();
 $paquete_id=$_GET["id"];
+//$tabla="SELECT * FROM tpaquetes WHERE idpaquetes='$paquete_id'";
 $tabla="SELECT * FROM tpaquetes WHERE idpaquetes='$paquete_id'";
-$datos= "SELECT * FROM tpaquetes WHERE estado!=0";
-$tabla2 = $con->query($datos);
-
 $paquete_lista = mysqli_query($con,$tabla);
 
 $fila=mysqli_fetch_array($paquete_lista);
 
+//$datos= "SELECT * FROM tpaquetes WHERE estado!=0";
+//$tabla2 = $con->query($datos);
+
+//aqui se almacenan los datos del tours en peru
+      $datosp= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0";
+      $tablap = $con->query($datosp);
 //$paquete_lista = $con->query($tabla);
+//aqui se almacena los datos del canimo inca
+      $datoscif="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='3' and P.estado!=0";//buscamos
+      $tablacif=$con->query($datoscif);
+//aqui se almacena los datos de tours clasicos
+      $datoscic="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='2' and P.estado!=0";
+      $tablacic=$con->query($datoscic);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,10 +44,10 @@ $fila=mysqli_fetch_array($paquete_lista);
 	
 	 <?php include("header.php"); ?>
       <div class="main">
-      	<header id="header" role="banner" class="">
-
-      		
-      		
+            <div class="trip">
+                  <p >PERU 51.84.262.555     COLOMBIA 57.5641.4644       CHILE 53.414.144479      ECUADOR 531.47.87499009      MEXICO 87.4.9874411</p>
+            </div>
+      	<header id="header" role="banner" class="">     		
       		
       	</header>
       		<div>
@@ -47,77 +57,63 @@ $fila=mysqli_fetch_array($paquete_lista);
 
       		<div class="col-md-4 col-sm-12 full">
                         <section >
-                        <!--<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>-->
+                        <h5 class="subtitulos">CONOCE NUESTRO PERU</h5>
                               <ul id="listas" class="full">
                                     <?php
-                                    while ($user =mysqli_fetch_array($tabla2) )
+                                    while ($user =mysqli_fetch_array($tablap) )
                                     {
-                                          echo '<li>';
-                                          echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
+                                          if ($paquete_id==$user["idpaquetes"]) {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
+                                          }
+                                          else {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                          }
                                     }
                                ?>
                               </ul>
                         </section>
       			<section >
-      				<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="sidebar.php">Tour 5 Dias Clasico Inca:Cusco City Tour , Valle Sagrado, Machupicchu</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                              <h5 class="subtitulos">Camino Inca a Machu Picchu</h5>
+                              <ul id="listas" class="full">
+                                    <?php
+                                    while ($user =mysqli_fetch_array($tablacif) )
+                                    {
+                                          if ($paquete_id==$user["idpaquetes"]) {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
+                                          }
+                                          else {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                          }
+                                    }
+                                    
+                                    ?>
 
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en todo el peru</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
-
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en Sudamerica</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
-
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en Cusco</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                              </ul>
+                        </section>
+                        <section >
+                              <h5 class="subtitulos">Tours en Cusco</h5>
+                              <ul id="listas" class="full">
+                                    <?php
+                                    while ($user =mysqli_fetch_array($tablacic) )
+                                    {
+                                          if ($paquete_id==$user["idpaquetes"]) {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
+                                          }
+                                          else {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                          }
+                                    }
+                                    ?>
  
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Trekking a  Machupicchu</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                              </ul>
+                        </section>
 
-      				</ul>
-      			</section>
                         <section>
                               <h5 class="subextra"> opiniones de nuestros pasajeros</h5>
                               <div class="orden">
@@ -173,198 +169,132 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 }
                                               ?>   
                                           </p>
-		      				<!--<p>
-		      					<h5 class="subtitulo-paquete">Primer Dia: Llegada al Cusco</h5>
-                                                <p>
-                                                      Un representante autorizado de GOTOPERU le dará la bienvenida en el aeropuerto y lo llevará a su hotel seleccionado en Cusco.
 
-                                                      El resto del día es suyo para disfrutar de la ciudad y descubrir por qué Cusco es una parte tan vital del turismo en Perú. Asegúrese de explorar los muchos restaurantes y locales nocturnos que se ofrecen en la plaza principal de la ciudad.
-                                                </p>
-		      					<ul id="listas2" >
-		      						<li>recojo al hotel </li>
-		      						<li>traslado a las estaciones de trenes</li>
-		      						<li>pasaje de tren hasta aguas calientes -machupicchu</li>
-		      					</ul>
-		      				</p>
-                                          <p>
-                                                <h5 class="subtitulo-paquete">Segundo Dia: City tour en Cusco</h5>
-                                                 <img src="img/qoricancha.jpg" alt="" class="imagen-paquetes">
-                                                <p>
-                                                     Después del desayuno en su hotel, la mañana es para descubrir la ciudad imperial del Cusco. 
-
-                                                     Los lugares recomendados para visitar en Cusco son el Mercado de San Pedro, el Museo de Arte Precolombino y el Museo de Chocolate.
-
-                                                     Temprano por la tarde tendrá una visita guiada de Cusco y sus alrededores, donde la característica principal es la arquitectura colonial inca y española.
-
-                                                     Lo más destacado de la Capital histórica del Perú:
-                                                    
-                                                </p>
-                                                <ul id="listas2" >
-                                                      <li>Arquitectura colonial inca y española</li>
-                                                      <li>Catedral de Santo Domingo: una iglesia de estilo barroco construida sobre las ruinas del espléndido Templo Inca Qoricancha (Templo del Sol).</li>
-                                                      <li>Q'enko: un anfiteatro, utilizado para los sacrificios ceremoniales.</li>
-                                                      <li>Tambomachay: centro ceremonial de culto al agua.</li>
-                                                      <li>Sacsayhuamán: fortaleza incaica y sitio del Inti Raymi (Fiesta del Sol realizada cada año en Junio), más notable por sus piedras talladas a mano de hasta 9m de altura y con un peso de más de 350 toneladas.</li>
-                                                      <li>Tambo Inca de Puka Pukara: parada de descanso de los antiguos viajeros.</li>
-                                                </ul>
-                                                <p>Tiene la tarde libre para disfrutar, usted podrá conocer a la gente local y saborear los platos típicos en uno de los muchos restaurantes y cafés de Cusco.</p>
-                                          </p>
-                                          <p>
-                                                <h5 class="subtitulo-paquete">Tercer Dia: Experiencia en el Valle Sagrado</h5>
-                                                <p>
-                                                      Después de un delicioso desayuno en su hotel, un representante GOTOPERU lo recogerá para un corto viaje en bus hacia el Valle Sagrado de los Incas. Asegúrese de tener su cámara lista para capturar los exuberantes paisajes andinos y los pueblos tradicionales que salpican la ladera!
-
-                                                      Su aventura empezará visitando Pisaq, un pequeño pueblo con su exquisita arquitectura, es el lugar perfecto para comprar recuerdos auténticos andinos. Podrá observar qué el mercado de Pisaq tiene una popularidad única.
-                                                      <img src="img/valle-sagrado.jpg" alt="" class="imagen-paquetes">
-
-
-                                                      Luego realizará un recorrido por Ollantaytambo. Este sitio inca comenzó como un palacio, pero fue utilizado como resistencia inca contra los conquistadores españoles. Ya sea palacio o fortaleza, estas ruinas ofrecen una vista inolvidable de la zona circundante.
-
-                                                      Después de un día de exploración arqueológica, lo llevaremos a coger el tren rumbo a Aguas Calientes, donde pasará la noche.
-                                                      
-                                                      Notas de viaje: Hornos de barro, trajes tradicionales, tradiciones agrícolas y artesanías hechas a mano. Su día en el Valle Sagrado lo llevará atrás en el tiempo a más de 500 años. Cuando esté rodeado de la rica tierra y pequeños pueblos, verá rápidamente porqué este hermoso lugar era tan importante para la civilización inca, y por qué muchos todavía abrazan este estilo de vida hasta el día de hoy.
-                                                </p>
-                                          </p>
-                                          <p>
-                                                <h5 class="subtitulo-paquete">Cuarto Dia: Tour a Machu Picchu</h5>
-                                                <img src="img/machupicchu.jpg" alt="" class="imagen-paquetes">
-                                                <p>
-                                                <br>
-                                                      Después de disfrutar de un delicioso desayuno, un representante de GOTOPERU lo recogerá de su hotel para abordar un bus rumbo al Patrimonio Mundial de la Humanidad "Machu Picchu". <br><br> El viaje dura tan solo 30 minutos.
-                                                      <br>
-                                                      <br>
-                                                      Visitas más destacadas:
-                                                       <ul id="listas2" >
-                                                      <li>Visita guiada a Machu Picchu, una de las Siete Maravillas del Mundo.</li>
-                                                      <li>Información sobre el descubrimiento de Hiram Bingham de este lugar sagrado en 1911.</li>
-                                                      <li>Explicación de las características arquitectónicas más significativas, incluyendo la Piedra del Sol, Templo del Sol, la Sala de las Tres Ventanas, etc.</li>
-                                                      <li>Tiempo libre después de la visita guiada para que pueda contemplar el panorama y tomar fotografías.</li>
-
-                                                </ul>
-                                                </p>
-                                                
-                                                <p>
-                                                            Luego de su tour volveremos a Aguas Calientes, donde tendrá la tarde libre.
-
-                                                            Tomará el tren de regreso a Cusco, donde podrá descansar y revisar sus fotografías en su hotel.
-                                                      </p>
-                                          </p>
-                                          <p>
-                                                <h5 class="subtitulo-paquete">Quinto Dia:Despedida</h5>
-                                          </p>
-                                          <p>
-                                                Después del desayuno, será acompañado al aeropuerto para tomar su vuelo de regreso a Lima y luego de vuelta a casa. O si usted desea continuar su aventura peruana, puede tomar otra de nuestras excursiones increíbles.
-                                          </p>
-                                          <div class="mensaje-alerta">
-                                                <strong>importante</strong>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ea dolorem voluptates sint maxime eius adipisci id commodi consequatur eaque! Ducimus rem nesciunt architecto cumque perferendis tenetur, ullam eveniet, dolor.
-                                          </div>
-		      				<p>
-		      					
-		      					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptas nihil repellat alias error corporis fugiat, laboriosam quisquam exercitationem ratione eaque accusantium totam obcaecati eveniet minus sed asperiores quia deleniti!
-                                                
-		      				</p>-->
                                           
                                           <?php 
                                                 incluye($fila);
                                           ?> 
 
-                                          <h3>precio por persona segun tipo de hotel:</h3>
+                                          <h3>HOTELES</h3>
+                                                <div class="panel panel-danger">
+                                                <div class="panel-heading">
+                                                Aqui podra escoger la acomodacion de sus hoteles</div>
+                                                <div class="panel-body">
+                                                <table class="table">
+                                                <thead>
+                                                <tr>
+                                                     
+                                                     <th>Soles</th>
+                                                     <th>Dolares</th>
+                                                     <th>Hoteles</th>
+                                                      </tr>
+                                                </thead>
+                                                    <tbody>
+                                                <tr>
+                                                     <td>1</td>
+                                                     <td>1</td>
+                                                     <td>hoteles 5 estrellas</td>
+                                                      </tr>
+                                                <tr>
+                                                     <td>2</td>
+                                                     <td>2</td>
+                                                     <td>hoteles 4 estrellas</td>
+                                                      </tr>
+                                                <tr>
+                                                     <td>3</td>
+                                                     <td>3</td>
+                                                     <td>hoteles 3 estrellas</td>
+                                                      </tr>
+                                                      <tr>
+                                                     <td>4</td>
+                                                     <td>4</td>
+                                                     <td>hoteles 4 estrellas</td>
+                                                      </tr>
+                                                </tbody>
+                                                </table>
+                                                </div>
+                                                </div>
+                                          <h3>TRENES</h3>
+                                          <div class="panel panel-danger">
+                                                <div class="panel-heading">
+                                                Aqui podra escoger el servicio de tren que desea</div>
+                                                <div class="panel-body">
+                                                <table class="table">
+                                                <thead>
+                                                <tr>
+                                                     
+                                                     <th>Soles</th>
+                                                     <th>Dolares</th>
+                                                     <th>TRENES</th>
+                                                      </tr>
+                                                </thead>
+                                                    <tbody>
+                                                <tr>
+                                                     <td>1</td>
+                                                     <td>1</td>
+                                                     <td>Belmont Hiram Bingham</td>
+                                                      </tr>
+                                                <tr>
+                                                     <td>2</td>
+                                                     <td>2</td>
+                                                     <td>Andean Explorer</td>
+                                                      </tr>
+                                                <tr>
+                                                     <td>3</td>
+                                                     <td>3</td>
+                                                     <td>Visitandome</td>
+                                                      </tr>
+                                                      <tr>
+                                                     <td>4</td>
+                                                     <td>4</td>
+                                                     <td>Expedition</td>
+                                                      </tr>
+                                                </tbody>
+                                                   </table>
+                                                </div>
+                                          </div>
 
-                                          <table class="tabla-precio">
+                                          <h3>SERVICIOS ADICIONALES</h3>
+                                          <div class="panel panel-danger">
+                                                <div class="panel-heading">
+                                                si desea algunos de estos servicios recuerde especificarlo al contactarnos</div>
+                                                <div class="panel-body">
+                                                <table class="table">
                                                 <thead>
-                                                      <tr>
-                                                            <th>dolares</th>
-                                                            <th>soles</th>
-                                                            <th>hoteles</th>
-                                                      </tr>
-                                                </thead>
-                                                <tbody>
-                                                      <tr>
-                                                            <td>usd </td>
-                                                            <td>s/.</td>
-                                                            <td>hotel 2 estrellas: Lorem ipsum dolor sit amet.</td>
-                                                      </tr>
-                                                      <tr>
-                                                            <td>usd </td>
-                                                            <td>s/.</td>
-                                                            <td>hotel 3 estrellas: Lorem ipsum dolor sit.</td>
-                                                      </tr>
-                                                      <tr>
-                                                            <td>usd </td>
-                                                            <td>s/.</td>                                                            
-                                                            <td>hotel 4 estrellas: Lorem ipsum dolor sit amet.</td>
-                                                      </tr>
-                                                                                                            <tr>
-                                                            <td>usd </td>
-                                                            <td>s/.</td>                                                            
-                                                            <td>hotel 5 estrellas: Lorem ipsum dolor sit amet.</td>
-                                                      </tr>
-                                                </tbody>
-                                          </table>
-                                          <h4>Servicios Adicionales</h4>
-                                          <table class="tabla-precio">
-                                                <thead>
-                                                      <tr>
-                                                            <th>servicio de TREN</th>
-                                                            <th>dolares</th>
-                                                            <th>soles</th>
-                                                      </tr>
-                                                </thead>
-                                                <tbody>
-                                                      <tr>
-                                                            <td>De Tren Expedition (Categoria Turistica) Para Tren Vistadome (Clase Turistica Superior)</td>
-                                                            <td>usd</td>
-                                                            <td>s/.</td>
-                                                            
-                                                      </tr>
+                                                <tr>
                                                      
-                                                </tbody>
-                                          </table>
-                                          <table class="tabla-precio">
-                                                <thead>
-                                                      <tr>
-                                                            <th>servicio de ALIMENTACION </th>
-                                                            <th>dolares</th>
-                                                            <th>soles</th>
+                                                     <th>Soles</th>
+                                                     <th>Dolares</th>
+                                                     <th>SERVICIO</th>
                                                       </tr>
                                                 </thead>
-                                                <tbody>
-                                                      <tr>
-                                                            <td>Para adicionar almuerzo y cena (el desayuno esta incluido)</td>
-                                                            <td>usd 42</td>
-                                                            <td>s/.140.00</td>
-                                                            
+                                                    <tbody>
+                                                <tr>
+                                                     <td>1</td>
+                                                     <td>Mark</td>
+                                                     <td>Alimentacion completa(almuerzos y cenas)</td>
                                                       </tr>
-                                                     
-                                                </tbody>
-                                          </table>
-                                          <table class="tabla-precio">
-                                                <thead>
-                                                      <tr>
-                                                            <th>servicio de TOURS </th>
-                                                            <th>dolares</th>
-                                                            <th>soles</th>
+                                                <tr>
+                                                     <td>2</td>
+                                                     <td>2</td>
+                                                     <td>MACHUPICCHU(de Tour compartido a Tour privado)</td>
                                                       </tr>
-                                                </thead>
-                                                <tbody>
-                                                      <tr>
-                                                            <td>Tour a Machu Picchu: de tour compartido para tour privado</td>
-                                                            <td>usd 29</td>
-                                                            <td>s/.96.00</td>
+                                                <tr>
+                                                     <td>3</td>
+                                                     <td>3</td>
+                                                     <td>VALLE SAGRADO(de Tour compartido a Tour privado)</td>
                                                       </tr>
                                                       <tr>
-                                                            <td>Tour al valle sagrado: de tour compartido para tour privado</td>
-                                                            <td>usd 59</td>
-                                                            <td>s/.197.00</td>
-                                                      </tr>
-                                                      <tr>
-                                                            <td>City tour cusco: de tour compartido para tour privado</td>
-                                                            <td>usd 29</td>
-                                                            <td>s/.96.00</td>
+                                                     <td>4</td>
+                                                     <td>4</td>
+                                                     <td>CITY TOUR CUSCO(de Tour compartido a Tour privado)</td>
                                                       </tr>
                                                 </tbody>
-                                          </table>
+                                                   </table>
+                                                </div>
+                                          </div>
+
+                                        
                                           <?php 
                                                 opcional($fila);
                                           ?> 

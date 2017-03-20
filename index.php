@@ -61,8 +61,8 @@ $con=conectar();
       				<!--<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>-->
       				<ul id="listas" class="full">
                                     <?php
-                                    $user2 =mysqli_fetch_array($tablaci);
-                                    $a =$user2["idpaquetes"];
+                                    //$user2 =mysqli_fetch_array($tablaci);
+                                    //$a =$user2["idpaquetes"];
                                     while ($user =mysqli_fetch_array($tabla) )
                                     {
                                                 echo '<li>';
@@ -99,18 +99,7 @@ $con=conectar();
  
       				</ul>
       			</section>
-      			<section >
-      				<h5 class="subtitulos">Trekking a  Machupicchu</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
 
-      				</ul>
-      			</section>
       			<section>
       				<div class="fb-comments" data-href="https://gotoperu.com/" data-width="100%" data-numposts="5"></div>
       			</section>
@@ -154,7 +143,7 @@ $con=conectar();
       			<section>
       				<!--<h5 class="subextra"> nuestra empresa es reconocida a nivel nacional</h5>-->
       				<div class="orden">
-      					<iframe width="100%" height="248" src="https://www.youtube.com/embed/Chq4BnQNUkw" frameborder="0" allowfullscreen></iframe>
+      					<iframe width="100%" height="248" src="https://www.youtube.com/embed/fF0xWDFCfC4?rel=0" frameborder="0" allowfullscreen></iframe>
       				</div>
       			</section>
       			<section>
