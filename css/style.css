@@ -267,7 +267,7 @@ hr {border: 2px solid khaki; height: 2px; background-color: darkkhaki;
 
 }
 .footer-link h5{
-	font-size: 1.5em;
+	font-size: 1.8em;
 	color: #cacc2d;
 }
 .centro{
@@ -372,13 +372,11 @@ background-color: #222;
     border-radius: 8px 0px 0px 8px;
     float: left;
     position: fixed;
-    min-height: 125px;
+    min-height: 50px;
     margin-bottom: 10px;
     overflow: hidden;
-
     width: 80px;
     top: 150px;
-
 }
 .compartir{
 	margin-left: 0px;
@@ -520,11 +518,13 @@ table{
 
 .pading-left{
 	padding-left: 15px;
+	margin-top: 1em;
+	line-height: 1.6em;
 }
 .imagen-paquetes{
 
-	width: 500px;
-	height: 200px;
+
+
 
 }
 .subtitulo-paquete{
@@ -678,4 +678,16 @@ img.codepen_image {
 }
 .subpagina:hover{
 	text-decoration: none;
+}
+.incluye{
+	color: #3AC554;
+}
+.no-incluye{
+	color: #EA1313;
+}
+.hotel{
+	color: #BB7F7F;
+}
+.trenes{
+	color: #343F66;
 }

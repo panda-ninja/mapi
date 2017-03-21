@@ -1,15 +1,15 @@
 <?php include('include/funciones.php'); ?>
 <?php include('conexion.php');
 $con=conectar();
-      $datos= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0";
+      $datos= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria WHERE PC.idcategoria='1' and P.estado!=0 ORDER BY P.duracion ";
       $tabla = $con->query($datos);
       //"INSERT INTO titinerario(dia,titulo,descripcion,imagen,idpaquetes)"
       //$datosci="SELECT idpaquetes FROM tpaquetescategoria ";
-      $datosci="SELECT P.idpaquetes FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0";
-      $tablaci=$con->query($datosci);
-      $datoscif="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='3' and P.estado!=0";//buscamos
+      //$datosci="SELECT P.idpaquetes FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0 ";
+      //$tablaci=$con->query($datosci);
+      $datoscif="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='3' and P.estado!=0 ORDER BY P.duracion";//buscamos
       $tablacif=$con->query($datoscif);
-      $datoscic="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='2' and P.estado!=0";
+      $datoscic="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='2' and P.estado!=0 ORDER BY P.duracion";
       $tablacic=$con->query($datoscic);
  ?>
 
@@ -155,26 +155,15 @@ $con=conectar();
       			</section>
       			<section>
       				<h5 class="subextra"> opiniones de nuestros pasajeros</h5>
-      				<div class="orden">
-      					<p class="comentarios">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, maiores praesentium architecto officia odit atque minima ipsam eaque tempora. Perferendis!
-      					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officia delectus culpa, enim incidunt alias ratione veniam quibusdam. Porro, necessitatibus!</p>
-      					<p>
-      						<strong class="autores">nombre:</strong>josue luis mancilla
-      						<br>
-      						<strong class="autores">pais:</strong> peru <br>
-      						<strong class="autores">fecha:</strong> 15/15/15
-      					</p>
-      				</div>
-      				<div class="orden">
-      					<p class="comentarios">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, maiores praesentium architecto officia odit atque minima ipsam eaque tempora. Perferendis!
-      					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officia delectus culpa, enim incidunt alias ratione veniam quibusdam. Porro, necessitatibus!</p>
-      					<p>
-      						<strong class="autores">nombre:</strong>josue luis mancilla
-      						<br>
-      						<strong class="autores">pais:</strong> peru <br>
-      						<strong class="autores">fecha:</strong> 15/15/15
-      					</p>
-      				</div>
+                              <div class="orden">
+                                    <p class="comentarios">Sí, sin duda lo recomendaría. Todos recogida, excursiones y alojamiento eran perfecto. También fueron muy útiles para ajustar algunos de los viajes de conjunto a nuestras necesidades. Sin duda, usted puede encontrar opciones más baratas una vez en el suelo a través de una variedad de agencias..<a href="testimonios.php">(leer mas)</a></p>
+                                    <p>
+                                          <strong class="autores">nombre:</strong>LEANNE BROOME
+                                          <br>
+                                          <strong class="autores">pais:</strong> Australia <br>
+                                          <strong class="autores">fecha:</strong> 12/13/15
+                                    </p>
+                              </div>
       				<hr>
       				<p class="centrado">
       					<a href="testimonios.php">miles de testimonios mas...</a>
@@ -182,7 +171,7 @@ $con=conectar();
       			</section>
       			<section>
       				<p>
-      					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGOTOPERUcom%2F%3Ffref%3Dts&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
       				</p>
       			</section>
       		</div>
@@ -190,13 +179,11 @@ $con=conectar();
       </div>
 	
 </div>
-	<div class="barra-chica hidden-xs hidden-sm ">
+<div class="barra-chica hidden-xs hidden-sm ">
 		<ul class="sin-margen">
 			<li >
 				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgotoperu.com%2F&width=250&layout=box_count&action=like&size=small&show_faces=true&share=true&height=65&appId" width="250" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 			</li>
-			<li class="compartir">asd</li>
-			<li class="compartir">adasfg</li>
 		</ul>
 	
 </div>

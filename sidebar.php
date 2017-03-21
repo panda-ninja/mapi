@@ -30,6 +30,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 	<title>gotoperu</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body class="marca-agua2">
 <div id="fb-root"></div>
@@ -117,23 +118,12 @@ $fila=mysqli_fetch_array($paquete_lista);
                         <section>
                               <h5 class="subextra"> opiniones de nuestros pasajeros</h5>
                               <div class="orden">
-                                    <p class="comentarios">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, maiores praesentium architecto officia odit atque minima ipsam eaque tempora. Perferendis!
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officia delectus culpa, enim incidunt alias ratione veniam quibusdam. Porro, necessitatibus!</p>
+                                    <p class="comentarios">Sí, sin duda lo recomendaría. Todos recogida, excursiones y alojamiento eran perfecto. También fueron muy útiles para ajustar algunos de los viajes de conjunto a nuestras necesidades. Sin duda, usted puede encontrar opciones más baratas una vez en el suelo a través de una variedad de agencias..<a href="testimonios.php">(leer mas)</a></p>
                                     <p>
-                                          <strong class="autores">nombre:</strong>josue luis mancilla
+                                          <strong class="autores">nombre:</strong>LEANNE BROOME
                                           <br>
-                                          <strong class="autores">pais:</strong> peru <br>
-                                          <strong class="autores">fecha:</strong> 15/15/15
-                                    </p>
-                              </div>
-                              <div class="orden">
-                                    <p class="comentarios">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, maiores praesentium architecto officia odit atque minima ipsam eaque tempora. Perferendis!
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officia delectus culpa, enim incidunt alias ratione veniam quibusdam. Porro, necessitatibus!</p>
-                                    <p>
-                                          <strong class="autores">nombre:</strong>josue luis mancilla
-                                          <br>
-                                          <strong class="autores">pais:</strong> peru <br>
-                                          <strong class="autores">fecha:</strong> 15/15/15
+                                          <strong class="autores">pais:</strong> Australia <br>
+                                          <strong class="autores">fecha:</strong> 12/13/15
                                     </p>
                               </div>
                               <hr>
@@ -157,7 +147,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 		      			</section>
 		      		</div>
 		      		<div>
-		      			<section class="pading-left">
+		      			<section class="pading-left" >
                                           <p>
                                              <?php 
 
@@ -175,7 +165,7 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 incluye($fila);
                                           ?> 
 
-                                          <h3>HOTELES</h3>
+                                          <h3 class="hotel"><i class="fa fa-bed" aria-hidden="true"></i>HOTELES</h3>
                                                 <div class="panel panel-danger">
                                                 <div class="panel-heading">
                                                 Aqui podra escoger la acomodacion de sus hoteles</div>
@@ -214,8 +204,8 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 </table>
                                                 </div>
                                                 </div>
-                                          <h3>TRENES</h3>
-                                          <div class="panel panel-danger">
+                                          <h3 class="trenes"><i class="fa fa-train" aria-hidden="true"></i>TRENES</h3>
+                                          <div class="panel panel-primary">
                                                 <div class="panel-heading">
                                                 Aqui podra escoger el servicio de tren que desea</div>
                                                 <div class="panel-body">
@@ -294,10 +284,6 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 </div>
                                           </div>
 
-                                        
-                                          <?php 
-                                                opcional($fila);
-                                          ?> 
 
 
 
@@ -309,6 +295,16 @@ $fila=mysqli_fetch_array($paquete_lista);
       	</div>
       </div>
 	
+</div>
+<div class="barra-chica hidden-xs hidden-sm ">
+            <ul class="sin-margen">
+                  <li >
+                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgotoperu.com%2F&width=250&layout=box_count&action=like&size=small&show_faces=true&share=true&height=65&appId" width="250" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                  </li>
+                  <li class="compartir"><a href="index.php"><button type="button" class="btn btn-warning">inicio</button></a></li>
+
+            </ul>
+      
 </div>
  	<script src="js/bootstrap.js"></script>
  	<script src="js/jquery-3.1.1.min.js"></script>

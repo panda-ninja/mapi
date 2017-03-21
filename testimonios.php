@@ -1,3 +1,19 @@
+<?php include('include/funciones.php'); ?>
+<?php include('conexion.php');
+$con=conectar();
+
+
+//aqui se almacenan los datos del tours en peru
+      $datosp= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0";
+      $tablap = $con->query($datosp);
+//$paquete_lista = $con->query($tabla);
+//aqui se almacena los datos del canimo inca
+      $datoscif="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='3' and P.estado!=0";//buscamos
+      $tablacif=$con->query($datoscif);
+//aqui se almacena los datos de tours clasicos
+      $datoscic="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='2' and P.estado!=0";
+      $tablacic=$con->query($datoscic);
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,65 +45,51 @@
       	<div class="container ">
       	      <div class="col-md-4 col-sm-12 full">
       			<section >
-      				<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>
+      				<h5 class="subtitulos">CONOCE NUESTRO PERU</h5>
       				<ul id="listas" class="full">
-      					<li>
-      						<a href="sidebar.php">Tour 5 Dias Clasico Inca:Cusco City Tour , Valle Sagrado, Machupicchu</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+      					              <?php
+                                    while ($user =mysqli_fetch_array($tablap) )
+                                    {
 
+                                          
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                          
+                                    }
+                               ?>
       				</ul>
       			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en todo el peru</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+            <section >
+                              <h5 class="subtitulos">Camino Inca a Machu Picchu</h5>
+                              <ul id="listas" class="full">
+                                    <?php
+                                    while ($user =mysqli_fetch_array($tablacif) )
+                                    {
 
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en Sudamerica</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                          
+                                    }
+                                    
+                                    ?>
 
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en Cusco</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                              </ul>
+                        </section>
+                        <section >
+                              <h5 class="subtitulos">Tours en Cusco</h5>
+                              <ul id="listas" class="full">
+                                    <?php
+                                    while ($user =mysqli_fetch_array($tablacic) )
+                                    {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                          
+                                    }
+                                    ?>
  
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Trekking a  Machupicchu</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                              </ul>
+                        </section>
 
-      				</ul>
-      			</section>
 
       		</div>
 
@@ -131,7 +133,16 @@
       		</div>
       	</div>
       </div>
-	
+</div>
+<div class="barra-chica hidden-xs hidden-sm ">
+            <ul class="sin-margen">
+                  <li >
+                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgotoperu.com%2F&width=250&layout=box_count&action=like&size=small&show_faces=true&share=true&height=65&appId" width="250" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                  </li>
+                  <li class="compartir"><a href="index.php"><button type="button" class="btn btn-warning">inicio</button></a></li>
+
+            </ul>
+      
 </div>
  	<script src="js/bootstrap.js"></script>
  	<script src="js/jquery-3.1.1.min.js"></script>

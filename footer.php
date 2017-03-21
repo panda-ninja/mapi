@@ -5,7 +5,7 @@
 			
 		</div>
 		<div class="col-md-3">
-			<a href="index.php " class="footer-link"><h5>inicio</h5></a>
+			<a href="index.php " class="footer-link"><h5>Inicio</h5></a>
 		</div>
 		<div class="col-md-3">
 			<a href="destinos.php" class="footer-link"><h5>Destinos</h5></a>

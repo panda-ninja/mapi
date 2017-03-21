@@ -12,9 +12,9 @@ function detalles($fila){
       //echo '<div class="parallax__layer parallax__layer--back">';
       //echo '<img class="codepen_image" src="img/'.$fila["imagen"].'">';
       //echo '</div></div>';
-
-      echo '<img src="img/'.$fila["imagen"].'" alt="" class="imagen-paquetes">';
-
+      echo '<p align="center">';
+      echo '<img src="img/'.$fila["imagen"].'" alt="" class="imagen-paquetes img-responsive" >';
+      echo '</p>';
       //echo '<div class="parallax-container "> <div class="parallax valign-wrapper">';
       //echo '<img src="img/'.$fila["imagen"].'" alt style="display: block; transform: translate3d(-50%, 63px, 0px);">';
       //echo '</div></div>';
@@ -22,9 +22,9 @@ function detalles($fila){
 
 }   
 function incluye($fila){
-      echo '<h4>Nuestro Tour incluye:</h4>';
+      echo '<h4 class="incluye"><i class="fa fa-check" aria-hidden="true"></i> Nuestro Tour incluye:</h4>';
       echo $fila["incluye"];
-      echo '<h4>Nuestro paquete NO incluye:</h4>';
+      echo '<h4 class="no-incluye"><i class="fa fa-times" aria-hidden="true"></i>Nuestro paquete NO incluye:</h4>';
       echo $fila["noincluye"];
 } 
 function opcional($fila){
