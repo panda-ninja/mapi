@@ -12,14 +12,14 @@ $fila=mysqli_fetch_array($paquete_lista);
 //$tabla2 = $con->query($datos);
 
 //aqui se almacenan los datos del tours en peru
-      $datosp= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0";
+      $datosp= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0 ORDER BY P.duracion";
       $tablap = $con->query($datosp);
 //$paquete_lista = $con->query($tabla);
 //aqui se almacena los datos del canimo inca
-      $datoscif="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='3' and P.estado!=0";//buscamos
+      $datoscif="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='3' and P.estado!=0 ORDER BY P.duracion";//buscamos
       $tablacif=$con->query($datoscif);
 //aqui se almacena los datos de tours clasicos
-      $datoscic="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='2' and P.estado!=0";
+      $datoscic="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='2' and P.estado!=0 ORDER BY P.duracion";
       $tablacic=$con->query($datoscic);
  ?>
 <!DOCTYPE html>
@@ -137,12 +137,13 @@ $fila=mysqli_fetch_array($paquete_lista);
 		      	<div class="row">
 		      		<div >
 		      			<section class="paquete-lateral">
-		      				<div>
+		      				<div class="margin-bottom">
 		      					<h5 class="reservar">¿Deseas Reservar?</h5>
-		      					<a href="#" class="chatea">¡chatea ahora!  </a>
+		      					<a href="#" class="chatea"><button type="button" class="btn btn-success">¡chatea ahora! </button></a>
 		      				</div>
                                           <li class="marcador">
-                                                <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuck&width=62&height=65&layout=box_count&size=small&show_faces=true&appId" width="62" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                                <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=90&height=65&layout=box_count&size=large&show_faces=true&appId" width="90" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                              
                                           </li>
 		      			</section>
 		      		</div>
@@ -283,11 +284,7 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                    </table>
                                                 </div>
                                           </div>
-
-
-
-
-                                          <div class="fb-comments" data-href="https://www.facebook.com/GOTOPERUcom/?fref=ts" data-numposts="5"></div>
+                                                <div class="fb-comments" data-href="https://www.facebook.com/Machupicchu-Company-1326498557442849/?fref=ts" data-width="100%"></div>
 		      			</section>
 		      		</div>
 		      	</div>
@@ -299,7 +296,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 <div class="barra-chica hidden-xs hidden-sm ">
             <ul class="sin-margen">
                   <li >
-                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgotoperu.com%2F&width=250&layout=box_count&action=like&size=small&show_faces=true&share=true&height=65&appId" width="250" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                       <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=92&layout=button&action=like&size=large&show_faces=true&share=false&height=65&appId" width="82" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                   </li>
                   <li class="compartir"><a href="index.php"><button type="button" class="btn btn-warning">inicio</button></a></li>
 

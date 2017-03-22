@@ -12,9 +12,15 @@ function detalles($fila){
       //echo '<div class="parallax__layer parallax__layer--back">';
       //echo '<img class="codepen_image" src="img/'.$fila["imagen"].'">';
       //echo '</div></div>';
-      echo '<p align="center">';
-      echo '<img src="img/'.$fila["imagen"].'" alt="" class="imagen-paquetes img-responsive" >';
-      echo '</p>';
+      if ($fila["dia"]==1) {
+            echo '<img src="img/'.$fila["imagen"].'" alt="" class="imagen-paquetes img-responsive" >';
+      }
+      else {
+            echo '<p align="center">';
+            echo '<img src="img/'.$fila["imagen"].'" alt="" class="imagen-paquetes img-responsive" >';
+            echo '</p>';            
+      }
+
       //echo '<div class="parallax-container "> <div class="parallax valign-wrapper">';
       //echo '<img src="img/'.$fila["imagen"].'" alt style="display: block; transform: translate3d(-50%, 63px, 0px);">';
       //echo '</div></div>';

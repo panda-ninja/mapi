@@ -24,6 +24,7 @@ $con=conectar();
       <link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>
+
 <body class=" marca-agua2">
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -48,7 +49,7 @@ $con=conectar();
                   </div>
       	<header id="header" role="banner" class="">
                   <div class="row">
-      		    <i class="bloque-iconos col-md-8 col-sm-8 col-xs-8"> <img src="img/1.png" alt="" class="icono-portada img-responsive"><img src="img/2.png" alt="" class="icono-portada img-responsive"><img src="img/3.png" alt="" class="icono-portada img-responsive"><img src="img/4.png" alt="" class="icono-portada img-responsive"><img src="img/5.png" alt="" class="icono-portada img-responsive"><img src="img/6.png" alt="" class="icono-portada img-responsive"><img src="img/7.png" alt="" class="icono-portada img-responsive"><img src="img/8.png" alt="" class="icono-portada img-responsive"></i>
+      		    <i class="bloque-iconos col-md-8 col-sm-8 col-xs-10"> <img src="img/1.png" alt="" class="icono-portada img-responsive"><img src="img/2.png" alt="" class="icono-portada img-responsive"><img src="img/3.png" alt="" class="icono-portada img-responsive"><img src="img/4.png" alt="" class="icono-portada img-responsive"><img src="img/5.png" alt="" class="icono-portada img-responsive"><img src="img/6.png" alt="" class="icono-portada img-responsive"><img src="img/7.png" alt="" class="icono-portada img-responsive"><img src="img/8.png" alt="" class="icono-portada img-responsive"></i>
       		</div>
       	</header>
       	<div>
@@ -66,7 +67,7 @@ $con=conectar();
                                     while ($user =mysqli_fetch_array($tabla) )
                                     {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';
                                     }
 
                                      ?>
@@ -101,7 +102,7 @@ $con=conectar();
       			</section>
 
       			<section>
-      				<div class="fb-comments" data-href="https://gotoperu.com/" data-width="100%" data-numposts="5"></div>
+                              <div class="fb-comments" data-href="https://www.facebook.com/Machupicchu-Company-1326498557442849/?fref=ts" data-width="100%"></div>
       			</section>
       			<section >
       				<h5 class="subextra">NOTICIAS SOBRE MACHUPICCHU</h5>
@@ -115,28 +116,8 @@ $con=conectar();
 						</li>
 						</ul>
       				</article>
-      				<div>
-      				<article class="noticias">
-      					<h4 class="titulo-noticia"><a href="#">Locomotoras especiales para la ruta de machupicchu</a></h4>
-      					<p class="fecha-noticia">26 diciembre del 2016</p>
-      					<p>"El operador ferroviario encargado del transporte de pasajeros desde la ciudad de Cusco hasta Machupicchu, viene elaborando un plan donde los puntos más relevantes es el de ofrecer un mejor servicio para los usuarios, así como el de ofrecer un servicio más ecológico y amigable con la naturaleza...  "<a href="#">Leer mas...</a></p>
-      					<ul class="noticias-face">
-      					<li class="compartir-noticia" >
-							<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fgotoperu.com%2F&width=143&layout=button&action=like&size=small&show_faces=true&share=true&height=65&appId" width="143" height="19" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-						</li>
-						</ul>
-      				</article>
-      				</div>
-      				<article class="noticias">
-      					<h4 class="titulo-noticia"><a href="#">Locomotoras especiales para la ruta de machupicchu</a></h4>
-      					<p class="fecha-noticia">26 diciembre del 2016</p>
-      					<p>"El operador ferroviario encargado del transporte de pasajeros desde la ciudad de Cusco hasta Machupicchu, viene elaborando un plan donde los puntos más relevantes es el de ofrecer un mejor servicio para los usuarios, así como el de ofrecer un servicio más ecológico y amigable con la naturaleza...  "<a href="#">Leer mas...</a></p>
-      					<ul class="noticias-face">
-      					<li class="compartir-noticia" >
-							<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fgotoperu.com%2F&width=143&layout=button&action=like&size=small&show_faces=true&share=true&height=65&appId" width="143" height="19" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-						</li>
-						</ul>
-      				</article>
+
+
       			</section>
       		</div>
       		<div class="col-md-5 col-sm-12 ">
@@ -147,9 +128,10 @@ $con=conectar();
       				</div>
       			</section>
       			<section>
-      				<h5 class="subextra"> mire los testimonios</h5>
+      				<h5 class="subextra">Recomendaciones si visitas Machu Picchu</h5>
       				<div class="orden">
-      					<iframe width="100%" height="248" src="https://www.youtube.com/embed/Chq4BnQNUkw" frameborder="0" allowfullscreen></iframe>
+                                    <iframe width="100%" height="248" src="https://www.youtube.com/embed/ZTU2_FhIcGw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
       				</div>
 
       			</section>
@@ -182,7 +164,7 @@ $con=conectar();
 <div class="barra-chica hidden-xs hidden-sm ">
 		<ul class="sin-margen">
 			<li >
-				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgotoperu.com%2F&width=250&layout=box_count&action=like&size=small&show_faces=true&share=true&height=65&appId" width="250" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=92&layout=button&action=like&size=large&show_faces=true&share=false&height=65&appId" width="82" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 			</li>
 		</ul>
 	
@@ -190,6 +172,20 @@ $con=conectar();
  	<script src="js/bootstrap.js"></script>
  	<script src="js/jquery-3.1.1.min.js"></script>
  	<script src="js/script.js"></script>
+      <!-- begin olark code -->
+<script type="text/javascript" async>
+;(function(o,l,a,r,k,y){if(o.olark)return;
+r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0];
+y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r);
+y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};
+y.extend=function(i,j){y("extend",i,j)};
+y.identify=function(i){y("identify",k.i=i)};
+y.configure=function(i,j){y("configure",i,j);k.c[i]=j};
+k=y._={s:[],t:[+new Date],c:{},l:a};
+})(window,document,"static.olark.com/jsclient/loader.js");
+/* Add configuration calls bellow this comment */
+olark.identify('8407-174-10-8084');</script>
+<!-- end olark code -->
 </body>
 <?php include("footer.php"); ?>
 </html>
