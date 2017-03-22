@@ -53,7 +53,7 @@ $con=conectar();
 
                                           
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
                                           
                                     }
                                ?>
@@ -67,7 +67,7 @@ $con=conectar();
                                     {
 
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
                                           
                                     }
                                     
@@ -82,7 +82,7 @@ $con=conectar();
                                     while ($user =mysqli_fetch_array($tablacic) )
                                     {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].'</a>';                                                
                                           
                                     }
                                     ?>

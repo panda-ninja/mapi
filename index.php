@@ -80,7 +80,7 @@ $con=conectar();
                                     while ( $user3 =mysqli_fetch_array($tablacif)) 
                                     {
                                           echo '<li>';
-                                          echo '<a href="sidebar.php?id='.$user3["idpaquetes"].'">'.$user3["titulo"].' - ('.$user3["duracion"].' dias)</a>';
+                                          echo '<a href="sidebar.php?id='.$user3["idpaquetes"].'">'.$user3["titulo"].' - <strong>('.$user3["duracion"].' dias)</strong></a>';
                                     }
                                     
                                     ?>
@@ -94,7 +94,7 @@ $con=conectar();
                                     while ( $user4 =mysqli_fetch_array($tablacic)) 
                                     {
                                           echo '<li>';
-                                          echo '<a href="sidebar.php?id='.$user4["idpaquetes"].'">'.$user4["titulo"].' - ('.$user4["duracion"].' dias)</a>';
+                                          echo '<a href="sidebar.php?id='.$user4["idpaquetes"].'">'.$user4["titulo"].'</a>';
                                     }
                                     ?>
  

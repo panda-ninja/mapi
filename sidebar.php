@@ -65,11 +65,11 @@ $fila=mysqli_fetch_array($paquete_lista);
                                     {
                                           if ($paquete_id==$user["idpaquetes"]) {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';
                                           }
                                           else {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
                                           }
                                     }
                                ?>
@@ -83,11 +83,11 @@ $fila=mysqli_fetch_array($paquete_lista);
                                     {
                                           if ($paquete_id==$user["idpaquetes"]) {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';
                                           }
                                           else {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
                                           }
                                     }
                                     
@@ -103,11 +103,11 @@ $fila=mysqli_fetch_array($paquete_lista);
                                     {
                                           if ($paquete_id==$user["idpaquetes"]) {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].'</a>';
                                           }
                                           else {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - ('.$user["duracion"].' dias)</a>';                                                
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].'</a>';                                                
                                           }
                                     }
                                     ?>
@@ -139,10 +139,10 @@ $fila=mysqli_fetch_array($paquete_lista);
 		      			<section class="paquete-lateral">
 		      				<div class="margin-bottom">
 		      					<h5 class="reservar">¿Deseas Reservar?</h5>
-		      					<a href="#" class="chatea"><button type="button" class="btn btn-success">¡chatea ahora! </button></a>
+		      					<a href="#" class="chatea"><button type="button" class="btn btn-success">¡ CHATEA ! </button></a>
 		      				</div>
                                           <li class="marcador">
-                                                <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=90&height=65&layout=box_count&size=large&show_faces=true&appId" width="90" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                                <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=90&height=65&layout=box_count&size=large&show_faces=true&appId" width="85" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                                               
                                           </li>
 		      			</section>
