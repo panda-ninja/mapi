@@ -45,13 +45,25 @@ $con=conectar();
 	 </div>-->
       <div class="main">
                   <div class="trip">
-                        <p >PERU 51.84.262.555     COLOMBIA 57.5641.4644       CHILE 53.414.144479      ECUADOR 531.47.87499009      MEXICO 87.4.9874411</p>
+                        <p ><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="">ver detalles</a></p>
                   </div>
       	<header id="header" role="banner" class="">
                   <div class="row">
-      		    <i class="bloque-iconos col-md-8 col-sm-8 col-xs-10"> <img src="img/1.png" alt="" class="icono-portada img-responsive"><img src="img/2.png" alt="" class="icono-portada img-responsive"><img src="img/3.png" alt="" class="icono-portada img-responsive"><img src="img/4.png" alt="" class="icono-portada img-responsive"><img src="img/5.png" alt="" class="icono-portada img-responsive"><img src="img/6.png" alt="" class="icono-portada img-responsive"><img src="img/7.png" alt="" class="icono-portada img-responsive"><img src="img/8.png" alt="" class="icono-portada img-responsive"></i>
+      		    <i class="bloque-iconos col-md-9 col-sm-8 col-xs-10"><img src="img/1.png" alt="" class="icono-portada img-responsive"><img src="img/2.png" alt="" class="icono-portada img-responsive"><img src="img/3.png" alt="" class="icono-portada img-responsive"><img src="img/4.png" alt="" class="icono-portada img-responsive"><img src="img/9.png" alt="" class="icono-portada img-responsive"><img src="img/6.png" alt="" class="icono-portada img-responsive"><img src="img/7.png" alt="" class="icono-portada img-responsive">
+                      </i>
       		</div>
       	</header>
+            <div class="row">
+                  <div class="nombre-iconos col-md-9 col-sm-8 col-xs-10">
+                        <label for="" class="pequeños">HOTEL</label>
+                        <label for="" class="pequeños">BUSES</label>
+                        <label for="" class="pequeños">TICKETS</label>
+                        <label for="" class="pequeños">TRENES</label>
+                        <label for="" class="largos">GUIADOS</label>
+                        <label for="" class="largos">DESAYUNOS</label>
+                        <label for="" class="muy-largos">ASISTENCIAS</label>
+                  </div>
+            </div>
       	<div>
       		<h3 class="titulo-principal">PAQUETES TURISTICOS A MACHUPICCHU Y PERU TOURS</h3>
       		
@@ -164,7 +176,7 @@ $con=conectar();
 <div class="barra-chica hidden-xs hidden-sm ">
 		<ul class="sin-margen">
 			<li >
-				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=92&layout=button&action=like&size=large&show_faces=true&share=false&height=65&appId" width="82" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=92&layout=button&action=like&size=large&show_faces=true&share=false&height=65&appId" width="75" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 			</li>
 		</ul>
 	

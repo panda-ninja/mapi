@@ -13,11 +13,15 @@ function detalles($fila){
       //echo '<img class="codepen_image" src="img/'.$fila["imagen"].'">';
       //echo '</div></div>';
       if ($fila["dia"]==1) {
-            echo '<img src="img/'.$fila["imagen"].'" alt="" class="imagen-paquetes img-responsive" >';
+            echo '<p class="margen-imagen-itinerario">';
+            echo '<img src="img/'.$fila["imagen"].'.jpg" alt="" class="imagen-paquetes img-responsive" >';
+            echo '<img src="img/'.$fila["imagen"].'1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+            echo '</p>';   
       }
       else {
             echo '<p align="center">';
-            echo '<img src="img/'.$fila["imagen"].'" alt="" class="imagen-paquetes img-responsive" >';
+            echo '<img src="img/'.$fila["imagen"].'.jpg" alt="" class="imagen-paquetes img-responsive" >';
+            echo '<img src="img/'.$fila["imagen"].'1.jpg" alt="" class="imagen-paquetes img-responsive" >';
             echo '</p>';            
       }
 

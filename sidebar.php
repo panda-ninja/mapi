@@ -46,7 +46,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 	 <?php include("header.php"); ?>
       <div class="main">
             <div class="trip">
-                  <p >PERU 51.84.262.555     COLOMBIA 57.5641.4644       CHILE 53.414.144479      ECUADOR 531.47.87499009      MEXICO 87.4.9874411</p>
+                  <p ><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://mapi.pandaninja.com.pe/sidebar.php?id=8">ver detalles</a></p>
             </div>
       	<header id="header" role="banner" class="">     		
       		
@@ -166,6 +166,10 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 incluye($fila);
                                           ?> 
 
+                                          <?php 
+                                           if ($fila["duracion"]!=1) {
+                                                 
+                                          ?>       
                                           <h3 class="hotel"><i class="fa fa-bed" aria-hidden="true"></i>HOTELES</h3>
                                                 <div class="panel panel-danger">
                                                 <div class="panel-heading">
@@ -224,27 +228,24 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                      <td>1</td>
                                                      <td>1</td>
                                                      <td>Belmont Hiram Bingham</td>
-                                                      </tr>
-                                                <tr>
-                                                     <td>2</td>
-                                                     <td>2</td>
-                                                     <td>Andean Explorer</td>
-                                                      </tr>
+                                                </tr>
                                                 <tr>
                                                      <td>3</td>
                                                      <td>3</td>
                                                      <td>Visitandome</td>
-                                                      </tr>
-                                                      <tr>
+                                                </tr>
+                                                <tr>
                                                      <td>4</td>
                                                      <td>4</td>
                                                      <td>Expedition</td>
-                                                      </tr>
+                                                </tr>
                                                 </tbody>
                                                    </table>
                                                 </div>
                                           </div>
-
+                                          <?php 
+                                          }
+                                          ?> 
                                           <h3>SERVICIOS ADICIONALES</h3>
                                           <div class="panel panel-danger">
                                                 <div class="panel-heading">
@@ -296,9 +297,9 @@ $fila=mysqli_fetch_array($paquete_lista);
 <div class="barra-chica hidden-xs hidden-sm ">
             <ul class="sin-margen">
                   <li >
-                       <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=92&layout=button&action=like&size=large&show_faces=true&share=false&height=65&appId" width="82" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                       <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=92&layout=button&action=like&size=large&show_faces=true&share=false&height=65&appId" width="75" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                   </li>
-                  <li class="compartir"><a href="index.php"><button type="button" class="btn btn-warning">inicio</button></a></li>
+                  <li class="compartir" align="center"><a href="index.php"><button type="button" class="btn btn-warning color-inicio">inicio</button></a></li>
 
             </ul>
       
