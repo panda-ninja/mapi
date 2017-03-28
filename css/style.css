@@ -120,7 +120,7 @@ header{
 .icono-portada{
 	width: 85px;
 	display: inline-block;
-	margin: 0.4em 0.5em;
+	margin: 0.4em 1em;
 }
 .bloque-iconos{
 	margin-left: 150px;
@@ -129,14 +129,12 @@ header{
 	margin-left: 160px;	
 }
 .nombre-iconos .pequeños{
+	margin: 0 27px;
+}
+.nombre-iconos .largos{
 	margin: 0 21px;
 }
-.nombre-iconos .largos{
-	margin: 0 16px;
-}
-.nombre-iconos .largos{
-	margin: 0 8px;
-}
+
 h3{
 	background-size: 150%;
 	text-align: center;
@@ -278,21 +276,20 @@ h3{
     padding-left: 0px;
 }
 .margin-top-footer{
-	padding-top: 100px;
+	padding-top: 228px;
+	padding-bottom: 0px;
 }
 .main{
 	
 }
 
 footer{
-	background-image: url(../img/footer2.jpg);
+	background-image: url(../img/footer1.jpg);
 	background-size: cover;
-	padding-bottom: 1px;
+
 }
 @media (max-width: 480px) {
-    footer {
-        background-image: url(../img/foter-pequeno.jpg);
-    }
+
     .margin-top-footer{
     	padding-top: 0px;
     }
@@ -307,9 +304,7 @@ footer{
     }
 }
 @media (max-width: 768px) {
-    footer {
-        background-image: url(../img/foter-pequeno.jpg);
-    }
+
     .margin-top-footer{
     	padding-top: 0px;
     }
@@ -401,22 +396,7 @@ background-color: #222;
 .letra-negra{
 	color: #000000;
 }
-.espacio-20px{
-	margin-top: 20px;
-}
-.espacio-20px ul{
-	align-content: center;
-	align-items: center;
-	text-align: center;
-}
-.espacio-20px ul li{
-	display: inline-block;
-	color: #8B4444;
-}
-.espacio-20px ul li i{
-	color: #fff;
-	margin: 4px;
-}
+
 .letra-blanca{
 	color: #FFFFFF;
 	font-size: 1.5em;
@@ -436,8 +416,9 @@ background-color: #222;
 
 }
 .largo{
+	margin:5px 5px;
 	padding-top: 5px;
-	width: 150px;
+	width: 120px;
 }
 .largo2{
 	padding-top: 5px;
@@ -603,15 +584,27 @@ table{
 .pading-left{
 	padding-left: 15px;
 	margin-top: 1em;
-	line-height: 1.6em;
+	line-height: 1.3em;
+}
+
+.letra-cambio p{
+	font-size: 13px;
+	padding-left: 18px;
+}
+.letra-cambio #listas2 li{
+	font-size: 13px !important;
+}
+.letra-cambio #listas2 li{
+	margin: 0 !important;
 }
 .imagen-paquetes{
 	padding-left: 20px;
-	width: 250px;
+	width: 270px;
 	display: inline-block;
+	margin-bottom: 10px;
 }
 .subtitulo-paquete{
-	font-size: 1.5em;
+	font-size: 1.3em;
 	color: #70A66C;
 
 }
@@ -771,8 +764,14 @@ img.codepen_image {
 .hotel{
 	color: #BB7F7F;
 }
+.hotel i{
+	margin-right: 5px;
+}
 .trenes{
 	color: #343F66;
+}
+.trenes i{
+	margin-right: 5px;
 }
 .margin-bottom{
 	margin-bottom: 5px;
@@ -794,4 +793,30 @@ img.codepen_image {
 .color-inicio:hover{
 	background-color: #323232;
 	border-color: #323232;
+}
+.derechos{
+	color: #fff;
+	margin-bottom: 2px;
+	margin-top: 0px
+}
+.nombre-paquete h3{
+	text-align: left;
+}
+#scrollToTop
+{
+	background-image: url(../img/arriba.png);
+	background-size: 74px;
+
+ position:fixed;
+ left:2%;
+ bottom:50px;
+ 
+border: 3px solid #000;
+ background-color:white;
+ color:#585858;
+ border-radius:100%;
+ height:80px;
+ width:80px;
+ font-size:15px;
+ display:none;
 }

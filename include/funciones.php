@@ -12,23 +12,25 @@ function detalles($fila){
       //echo '<div class="parallax__layer parallax__layer--back">';
       //echo '<img class="codepen_image" src="img/'.$fila["imagen"].'">';
       //echo '</div></div>';
+      echo '<div class="letra-cambio">';
       if ($fila["dia"]==1) {
-            echo '<p class="margen-imagen-itinerario">';
+            //echo '<p class="margen-imagen-itinerario">';
             echo '<img src="img/'.$fila["imagen"].'.jpg" alt="" class="imagen-paquetes img-responsive" >';
             echo '<img src="img/'.$fila["imagen"].'1.jpg" alt="" class="imagen-paquetes img-responsive" >';
-            echo '</p>';   
+            //echo '</p>';   
       }
       else {
-            echo '<p align="center">';
+            //echo '<p align="center">';
             echo '<img src="img/'.$fila["imagen"].'.jpg" alt="" class="imagen-paquetes img-responsive" >';
             echo '<img src="img/'.$fila["imagen"].'1.jpg" alt="" class="imagen-paquetes img-responsive" >';
-            echo '</p>';            
+            //echo '</p>';            
       }
 
       //echo '<div class="parallax-container "> <div class="parallax valign-wrapper">';
       //echo '<img src="img/'.$fila["imagen"].'" alt style="display: block; transform: translate3d(-50%, 63px, 0px);">';
       //echo '</div></div>';
-      echo $fila["descripcion"];    
+      echo $fila["descripcion"]; 
+      echo '</div>';   
 
 }   
 function incluye($fila){

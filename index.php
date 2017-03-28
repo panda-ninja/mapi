@@ -18,7 +18,7 @@ $con=conectar();
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>gotoperu</title>
+	<title>Machupicchu Company</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -35,10 +35,11 @@ $con=conectar();
 	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
-
+<input type="button" value="" id="scrollToTop" onclick="scrolltop();">
 <!--<div>
       <img src="img/logo-pequeño" alt="" class="marca-agua">
 </div>-->
+
 <div class="container encima ">
 	<?php include("header.php"); ?>
 <!--	 <div class="hidden-xs hidden-sm relleno-cabecera">

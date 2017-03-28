@@ -1,0 +1,29 @@
+#ErrorDocument 404 /404.php
+
+<IfModule mod_rewrite.c>
+
+# Activar RewriteEngine
+
+RewriteEngine on
+
+#RewriteCond %{HTTP_HOST} ^www.andesviagens.com$ [NC]
+
+#RewriteRule ^(.*)$ http://andesviagens.com/$1 [L,R=301]
+
+RewriteBase /
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+
+
+RewriteRule ^(.*).php$ $1.php [QSA]
+
+RewriteCond %{THE_REQUEST} \ /(.+)\.html
+
+RewriteRule ^ /%1.php [L,R=301]
+
+RewriteRule ^([0-9]+)$ sidebar.php?id=$1
+
+</IfModule>

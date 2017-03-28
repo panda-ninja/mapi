@@ -27,7 +27,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>gotoperu</title>
+	<title>Machupicchu Company</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -42,7 +42,7 @@ $fila=mysqli_fetch_array($paquete_lista);
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="container encima">
-	
+	<input type="button" value="" id="scrollToTop" onclick="scrolltop();">
 	 <?php include("header.php"); ?>
       <div class="main">
             <div class="trip">
@@ -51,9 +51,7 @@ $fila=mysqli_fetch_array($paquete_lista);
       	<header id="header" role="banner" class="">     		
       		
       	</header>
-      		<div>
-      	     		<h3><?php echo $fila["titulo"]; ?></h3>
-		    	</div>
+
       	<div class="container ">
 
       		<div class="col-md-4 col-sm-12 full">
@@ -149,6 +147,9 @@ $fila=mysqli_fetch_array($paquete_lista);
 		      		</div>
 		      		<div>
 		      			<section class="pading-left" >
+                                          <div class="nombre-paquete">
+                                                <h3><?php echo 'TOUR '.$fila["duracion"].' DIAS: '.$fila["titulo"]; ?></h3>
+                                          </div>
                                           <p>
                                              <?php 
 
@@ -178,30 +179,25 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 <table class="table">
                                                 <thead>
                                                 <tr>
-                                                     
-                                                     <th>Soles</th>
                                                      <th>Dolares</th>
                                                      <th>Hoteles</th>
                                                       </tr>
                                                 </thead>
                                                     <tbody>
                                                 <tr>
-                                                     <td>1</td>
+
                                                      <td>1</td>
                                                      <td>hoteles 5 estrellas</td>
                                                       </tr>
                                                 <tr>
                                                      <td>2</td>
-                                                     <td>2</td>
                                                      <td>hoteles 4 estrellas</td>
                                                       </tr>
                                                 <tr>
                                                      <td>3</td>
-                                                     <td>3</td>
                                                      <td>hoteles 3 estrellas</td>
                                                       </tr>
-                                                      <tr>
-                                                     <td>4</td>
+                                                <tr>
                                                      <td>4</td>
                                                      <td>hoteles 4 estrellas</td>
                                                       </tr>
@@ -217,25 +213,20 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 <table class="table">
                                                 <thead>
                                                 <tr>
-                                                     
-                                                     <th>Soles</th>
                                                      <th>Dolares</th>
                                                      <th>TRENES</th>
                                                       </tr>
                                                 </thead>
-                                                    <tbody>
+                                                <tbody>
                                                 <tr>
-                                                     <td>1</td>
                                                      <td>1</td>
                                                      <td>Belmont Hiram Bingham</td>
                                                 </tr>
                                                 <tr>
                                                      <td>3</td>
-                                                     <td>3</td>
                                                      <td>Visitandome</td>
                                                 </tr>
                                                 <tr>
-                                                     <td>4</td>
                                                      <td>4</td>
                                                      <td>Expedition</td>
                                                 </tr>
@@ -255,29 +246,24 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 <thead>
                                                 <tr>
                                                      
-                                                     <th>Soles</th>
                                                      <th>Dolares</th>
                                                      <th>SERVICIO</th>
                                                       </tr>
                                                 </thead>
                                                     <tbody>
                                                 <tr>
-                                                     <td>1</td>
                                                      <td>Mark</td>
                                                      <td>Alimentacion completa(almuerzos y cenas)</td>
                                                       </tr>
                                                 <tr>
                                                      <td>2</td>
-                                                     <td>2</td>
                                                      <td>MACHUPICCHU(de Tour compartido a Tour privado)</td>
                                                       </tr>
                                                 <tr>
                                                      <td>3</td>
-                                                     <td>3</td>
                                                      <td>VALLE SAGRADO(de Tour compartido a Tour privado)</td>
                                                       </tr>
-                                                      <tr>
-                                                     <td>4</td>
+                                                <tr>
                                                      <td>4</td>
                                                      <td>CITY TOUR CUSCO(de Tour compartido a Tour privado)</td>
                                                       </tr>
