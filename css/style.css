@@ -68,9 +68,17 @@ background-position: 10px 20px;
 	background-color: #000000;
 	border-color: #000;
 }
+.cabecera-boton:hover{
+	background-color: #1B1B1B;
+	border-color: #1B1B1B;
+}
 .color-anaranjado{
 	background-color: #FF8400;
 	border-color: #FF8400;
+}
+.color-anaranjado:hover{
+	background-color: #e8a761;
+	border-color: #e8a761;
 }
 .correo-cabecera{
 	color: #DB691D;
@@ -599,14 +607,14 @@ table{
 }
 .imagen-paquetes{
 	padding-left: 20px;
-	width: 270px;
+	width: 287px;
 	display: inline-block;
 	margin-bottom: 10px;
 }
 .subtitulo-paquete{
 	font-size: 1.3em;
 	color: #70A66C;
-
+	padding-left: 18px;
 }
 .destinos-marco{
 	padding: 5px 5px 5px 10px;
@@ -801,6 +809,7 @@ img.codepen_image {
 }
 .nombre-paquete h3{
 	text-align: left;
+	padding-left: 16px;
 }
 #scrollToTop
 {
@@ -810,7 +819,7 @@ img.codepen_image {
  position:fixed;
  left:2%;
  bottom:50px;
- 
+ z-index: 10;
 border: 3px solid #000;
  background-color:white;
  color:#585858;
