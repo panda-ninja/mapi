@@ -25,7 +25,7 @@
 			<a href="destinos.php" class="footer-link"><h5>Destinos</h5></a>
 		</div>
 		<div class="col-md-3 col-sm-3 col-xs-4">
-			<a href="testimonios.php" class="footer-link"><h5>Testimonios</h5></a>
+			<a href="nosotros" class="footer-link"><h5>Nosotros</h5></a>
 		</div>
 	</div>
 	<div class="row ">

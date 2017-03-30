@@ -31,6 +31,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="img/icono.gif" />
 </head>
 <body class="marca-agua2">
 <div id="fb-root"></div>
