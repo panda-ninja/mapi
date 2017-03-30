@@ -1,5 +1,5 @@
 <?php include('include/funciones.php'); ?>
-<?php include('include/conexion.php');
+<?php include('conexion.php');
 $con=conectar();
 
 

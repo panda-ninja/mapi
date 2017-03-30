@@ -1,5 +1,5 @@
 <?php include('include/funciones.php'); ?>
-<?php include('include/conexion.php');
+<?php include('conexion.php');
 $con=conectar();
       $datos= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria WHERE PC.idcategoria='1' and P.estado!=0 ORDER BY P.duracion ";
       $tabla = $con->query($datos);
