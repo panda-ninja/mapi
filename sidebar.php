@@ -1,5 +1,5 @@
 <?php include('include/funciones.php'); ?>
-<?php include('conexion.php');
+<?php include('include/conexion.php');
 $con=conectar();
 $paquete_id=$_GET["id"];
 //$tabla="SELECT * FROM tpaquetes WHERE idpaquetes='$paquete_id'";
@@ -30,7 +30,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 	<title>Machupicchu Company</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body class="marca-agua2">
 <div id="fb-root"></div>
@@ -278,7 +278,6 @@ $fila=mysqli_fetch_array($paquete_lista);
       		</div>
       	</div>
       </div>
-	
 </div>
 <div class="barra-chica hidden-xs hidden-sm ">
             <ul class="sin-margen">
@@ -288,7 +287,6 @@ $fila=mysqli_fetch_array($paquete_lista);
                   <li class="compartir" align="center"><a href="index.php"><button type="button" class="btn btn-warning color-inicio">inicio</button></a></li>
 
             </ul>
-      
 </div>
  	<script src="js/bootstrap.js"></script>
  	<script src="js/jquery-3.1.1.min.js"></script>

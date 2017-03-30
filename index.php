@@ -1,5 +1,5 @@
 <?php include('include/funciones.php'); ?>
-<?php include('conexion.php');
+<?php include('include/conexion.php');
 $con=conectar();
       $datos= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria WHERE PC.idcategoria='1' and P.estado!=0 ORDER BY P.duracion ";
       $tabla = $con->query($datos);
@@ -47,16 +47,16 @@ $con=conectar();
 	 </div>-->
       <div class="main">
                   <div class="trip">
-                        <p ><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="">ver detalles</a></p>
+                        <p ><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://mapi.pandaninja.com.pe/sidebar.php?id=19">ver detalles</a></p>
                   </div>
       	<header id="header" role="banner" class="">
                   <div class="row">
-      		    <i class="bloque-iconos col-md-9 col-sm-8 col-xs-10"><img src="img/1.png" alt="" class="icono-portada img-responsive"><img src="img/2.png" alt="" class="icono-portada img-responsive"><img src="img/3.png" alt="" class="icono-portada img-responsive"><img src="img/4.png" alt="" class="icono-portada img-responsive"><img src="img/9.png" alt="" class="icono-portada img-responsive"><img src="img/6.png" alt="" class="icono-portada img-responsive"><img src="img/7.png" alt="" class="icono-portada img-responsive">
+      		    <i class="bloque-iconos col-md-10 col-sm-8 col-xs-12 col-xs-offset-3"><img src="img/1.png" alt="" class="icono-portada img-responsive"><img src="img/2.png" alt="" class="icono-portada img-responsive"><img src="img/3.png" alt="" class="icono-portada img-responsive"><img src="img/4.png" alt="" class="icono-portada img-responsive"><img src="img/9.png" alt="" class="icono-portada img-responsive"><img src="img/6.png" alt="" class="icono-portada img-responsive"><img src="img/7.png" alt="" class="icono-portada img-responsive">
                       </i>
       		</div>
       	</header>
             <div class="row">
-                  <div class="nombre-iconos col-md-9 col-sm-8 col-xs-10">
+                  <div class="nombre-iconos col-md-10 col-sm-8 col-xs-12">
                         <label for="" class="pequeños">HOTEL</label>
                         <label for="" class="pequeños">BUSES</label>
                         <label for="" class="pequeños">TICKETS</label>
@@ -198,7 +198,10 @@ y.configure=function(i,j){y("configure",i,j);k.c[i]=j};
 k=y._={s:[],t:[+new Date],c:{},l:a};
 })(window,document,"static.olark.com/jsclient/loader.js");
 /* Add configuration calls bellow this comment */
-olark.identify('8407-174-10-8084');</script>
+olark.identify('8407-174-10-8084');
+    function startOlark() {
+        olark('api.box.expand');
+    }</script>
 <!-- end olark code -->
 </body>
 <?php include("footer.php"); ?>

@@ -4,17 +4,13 @@
 	          <ul class="nav nav-justified me">
 	          	<li class="chat centrado">
 	            	<a href="index.php" class="margenes"><img src="img/logo.png" alt="" class=" img-responsive largo"></a>
-
 	            </li>
 	            <li class="chat centrado hidden-xs">
 	            	<a href="index.php" class="margenes"><img src="img/logo2.jpg" alt="" class=" img-responsive imagen-logo" id="link-sin-borde">
-	            </a>
-				
+	            	</a>
 	            </li>
-
 	            <li class="chat centrado">
 	            	<a href="index.php" class="margenes"><img src="img/tripadvisor.jpg" alt="" class=" img-responsive largo2"></a>
-
 	            </li>
 	            <li class="llamanos centrado hidden-xs">
 	            <div class="row">

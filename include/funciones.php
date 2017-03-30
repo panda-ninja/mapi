@@ -2,7 +2,7 @@
 function portada($tour_id,$tour){
       $salida="";
       $salida= $salida.'<li>';
-      $salida= $salida.'<a href="sidebar.php">'.$tour["nombre"].'</a>';
+      $salida= $salida.'<a href="include/sidebar.php">'.$tour["nombre"].'</a>';
 return $salida;
 }
 function detalles($fila){
