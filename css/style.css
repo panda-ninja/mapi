@@ -1134,3 +1134,14 @@ xpopup
 	font-size: 1.3em;
 }
 /*aqui termina el efecto poop up*/
+
+
+.alert{
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    height:150px;
+    background-color:#D89775;
+    color:#C92528;
+    text-align:center;
+}

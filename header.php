@@ -1,4 +1,3 @@
- <?php ?>
  <div class="">
  <div class="masthead quedarse ">
 	        <nav>

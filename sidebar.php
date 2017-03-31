@@ -137,8 +137,8 @@ $fila=mysqli_fetch_array($paquete_lista);
 		      		<div >
 		      			<section class="paquete-lateral">
 		      				<div class="margin-bottom">
-		      					<h5 class="reservar">¿Deseas Reservar?</h5>
-		      					<a href="#" class="chatea"><button type="button" class="btn btn-success">¡ CHATEA ! </button></a>
+                    <button type="button" class="btn btn-warning reservar">¿Deseas <br>Reservar?</button>
+		      					<a href="#" class="chatea"><button type="button" class="btn btn-success"  onclick="startOlark()">¡ CHATEA ! </button></a>
 		      				</div>
                                           <li class="marcador">
                                                 <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=90&height=65&layout=box_count&size=large&show_faces=true&appId" width="85" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
@@ -292,6 +292,23 @@ $fila=mysqli_fetch_array($paquete_lista);
  	<script src="js/bootstrap.js"></script>
  	<script src="js/jquery-3.1.1.min.js"></script>
  	<script src="js/script.js"></script>
+        <!-- begin olark code -->
+<script type="text/javascript" async>
+;(function(o,l,a,r,k,y){if(o.olark)return;
+r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0];
+y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r);
+y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};
+y.extend=function(i,j){y("extend",i,j)};
+y.identify=function(i){y("identify",k.i=i)};
+y.configure=function(i,j){y("configure",i,j);k.c[i]=j};
+k=y._={s:[],t:[+new Date],c:{},l:a};
+})(window,document,"static.olark.com/jsclient/loader.js");
+/* Add configuration calls bellow this comment */
+olark.identify('8407-174-10-8084');
+    function startOlark() {
+        olark('api.box.expand');
+    }</script>
+<!-- end olark code -->
 </body>
 <?php include("footer.php"); ?>
 </html>
