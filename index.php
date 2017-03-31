@@ -11,6 +11,7 @@ $con=conectar();
       $tablacif=$con->query($datoscif);
       $datoscic="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='2' and P.estado!=0 ORDER BY P.duracion";
       $tablacic=$con->query($datoscic);
+      
  ?>
 
 <!DOCTYPE html>

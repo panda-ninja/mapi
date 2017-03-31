@@ -1,3 +1,4 @@
+ <?php ?>
  <div class="">
  <div class="masthead quedarse ">
 	        <nav>
@@ -38,7 +39,59 @@
 	            	<div class="row">
 	            		<div class="col-md-6 col-sm-6 " id="margen">
 	            			<a href="#" onclick="startOlark()"><button type='button' class='btn btn-info cabecera-boton'  ><i class="fa fa-commenting-o" aria-hidden="true"></i>  CHAT</button></a>
-	            			<button type='button' class="btn btn-danger color-anaranjado">CONSULTAS</button>
+	            			<!--<button type='button' class="btn btn-danger color-anaranjado">CONSULTAS</button>-->
+	            			<button type='button' class="btn btn-danger cd-popup-trigger">CONSULTAS</button>
+								<div class="cd-popup" role="alert">
+								    <div class="cd-popup-container">
+								        <!--<p>Are you sure you want to delete this element?</p>
+								        <ul class="cd-buttons">
+								            <li><a href="#0">Yes</a></li>
+								            <li><a href="#0">No</a></li>
+								        </ul>
+								        <a href="#0" class="cd-popup-close img-replace">Close</a>-->
+										<form class="form-horizontal" method="post" action="">
+											<h5 class="pop-up-titulo"><b>INFORMACION DE CONTACTO:</b></h5>
+										    <div class="form-group">
+										        <label class="control-label col-xs-2">Nombre:</label>
+										        <div class="col-xs-9">
+										            <input type="text" class="form-control" placeholder="Nombre">
+										        </div>
+										    </div>
+										    <div class="form-group">
+										        <label class="control-label col-xs-2">Apellido:</label>
+										        <div class="col-xs-9">
+										            <input type="text" class="form-control" placeholder="Apellido">
+										        </div>
+										    </div>
+										    <div class="form-group">
+										        <label class="control-label col-xs-2">Email:</label>
+										        <div class="col-xs-9">
+										            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+										        </div>
+										    </div>
+										    <div class="form-group">
+										        <label class="control-label col-xs-2" >Telefono:</label>
+										        <div class="col-xs-9">
+										            <input type="tel" class="form-control" placeholder="Telefono">
+										        </div>
+										    </div>
+										    <div class="form-group">
+										        <label class="control-label col-xs-2">Comentarios:</label>
+										        <div class="col-xs-9">
+										            <textarea rows="3" class="form-control" placeholder="Comentarios"></textarea>
+										        </div>
+										    </div>
+
+										    <br>
+										    <div class="form-group">
+										        <div class="col-xs-offset-3 col-xs-6">
+										            <input type="submit" class="btn btn-primary" value="Enviar">
+										            <!--<input type="reset" class="btn btn-default" value="Limpiar">-->
+										        </div>
+										    </div>
+										</form>
+								    </div> <!-- cd-popup-container -->
+								</div> <!-- cd-popup -->
 	            		</div>
 		            	<div class="col-md-6  col-sm-6 hidden-xs margin-15 paises">
 		            		<img src="img/foto.jpg" alt="" class="foto-cabecera">

@@ -12,7 +12,7 @@ function scrolltop()
 {
  $('html, body').animate({scrollTop : 0},500);
 }
-
+//titulo de nosotros
 $(function(){
   var $jittery = $('.jiterry'),
       aText    = $jittery.text().split(''),
@@ -27,4 +27,26 @@ $(function(){
   $.each($('span', $jittery), function(i){
     $(this).css('animation-delay', '-'+i+'70ms');
   });
+});
+//efecto pop up
+jQuery(document).ready(function($){
+    //open popup
+    $('.cd-popup-trigger').on('click', function(event){
+        event.preventDefault();
+        $('.cd-popup').addClass('is-visible');
+    });
+    
+    //close popup
+    $('.cd-popup').on('click', function(event){
+        if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+            event.preventDefault();
+            $(this).removeClass('is-visible');
+        }
+    });
+    //close popup when clicking the esc keyboard button
+    $(document).keyup(function(event){
+        if(event.which=='27'){
+            $('.cd-popup').removeClass('is-visible');
+        }
+    });
 });
