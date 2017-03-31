@@ -49,36 +49,36 @@
 								            <li><a href="#0">No</a></li>
 								        </ul>
 								        <a href="#0" class="cd-popup-close img-replace">Close</a>-->
-										<form class="form-horizontal" method="post" action="">
+										<form class="form-horizontal" method="post" action="include/registro.php">
 											<h5 class="pop-up-titulo"><b>INFORMACION DE CONTACTO:</b></h5>
 										    <div class="form-group">
 										        <label class="control-label col-xs-2">Nombre:</label>
 										        <div class="col-xs-9">
-										            <input type="text" class="form-control" placeholder="Nombre">
+										            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
 										        </div>
 										    </div>
 										    <div class="form-group">
 										        <label class="control-label col-xs-2">Apellido:</label>
 										        <div class="col-xs-9">
-										            <input type="text" class="form-control" placeholder="Apellido">
+										            <input type="text" class="form-control" placeholder="Apellido" name="apellido">
 										        </div>
 										    </div>
 										    <div class="form-group">
 										        <label class="control-label col-xs-2">Email:</label>
 										        <div class="col-xs-9">
-										            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+										            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="mail">
 										        </div>
 										    </div>
 										    <div class="form-group">
 										        <label class="control-label col-xs-2" >Telefono:</label>
 										        <div class="col-xs-9">
-										            <input type="tel" class="form-control" placeholder="Telefono">
+										            <input type="tel" class="form-control" placeholder="Telefono" name="telefono">
 										        </div>
 										    </div>
 										    <div class="form-group">
 										        <label class="control-label col-xs-2">Comentarios:</label>
 										        <div class="col-xs-9">
-										            <textarea rows="3" class="form-control" placeholder="Comentarios"></textarea>
+										            <textarea rows="3" class="form-control" placeholder="Comentarios" name="comentarios"></textarea>
 										        </div>
 										    </div>
 
