@@ -168,7 +168,8 @@ $con=conectar();
       			</section>
       			<section>
       				<p>
-      					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGOTOPERUcom%2F%3Ffref%3Dts&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
       				</p>
       			</section>
       		</div>
@@ -179,7 +180,8 @@ $con=conectar();
 <div class="barra-chica hidden-xs hidden-sm ">
 		<ul class="sin-margen">
 			<li >
-				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=92&layout=button&action=like&size=large&show_faces=true&share=false&height=65&appId" width="75" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FGOTOPERUcom%2F%3Ffref%3Dts&width=76&layout=box_count&action=like&size=small&show_faces=true&share=false&height=65&appId" width="75" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 			</li>
 		</ul>
 	

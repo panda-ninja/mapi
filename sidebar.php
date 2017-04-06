@@ -210,12 +210,14 @@ $fila=mysqli_fetch_array($paquete_lista);
                                 $nombre=$_POST['nombre'];
                                 $mail=$_POST['mail'];
                                 $telefono=$_POST['telefono'];
-                                $fecha=$_POST['fecha'];
+                                //$fecha=$_POST['fecha'];
+                                $fec = explode('/', $_POST['fecha']);
                                 $pais=$_POST['pais'];
                                 $pasajeros=$_POST['pasajeros'];
                                 $comentarios=$_POST['comentarios'];
 
                                 //$sql="INSERT INTO tcliente('nombres','nacionalidad','email','telefono') VALUES ($nombre,$pais,$mail,$telefono)";
+                                //$nfecha = "{$fec[2]}-{$fec[1]}-{$fec[0]}";
                                 $sql="INSERT INTO tcontacto(nombres,email,telefono,pais,pasajeros,comentario) VALUES ('$nombre','$mail','$telefono','$pais','$pasajeros','$comentarios')";
                                 mysqli_query($con,$sql);
                                 //--------------------------------------------------------------------------------------
@@ -248,7 +250,8 @@ $fila=mysqli_fetch_array($paquete_lista);
 		      					<a href="#" class="chatea"><button type="button" class="btn btn-success"  onclick="startOlark()">¡ CHATEA ! </button></a>
 		      				</div>
                                           <li class="marcador">
-                                                <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=90&height=65&layout=box_count&size=large&show_faces=true&appId" width="85" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                 
+                                                <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fgotoperu.com%2F&layout=box_count&size=small&mobile_iframe=true&width=81&height=40&appId" width="85" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                                               
                                           </li>
 		      			</section>
@@ -408,7 +411,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 <div class="barra-chica hidden-xs hidden-sm ">
             <ul class="sin-margen">
                   <li >
-                       <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FMachupicchu-Company-1326498557442849%2F%3Ffref%3Dts&width=92&layout=button&action=like&size=large&show_faces=true&share=false&height=65&appId" width="75" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                       <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FGOTOPERUcom%2F%3Ffref%3Dts&width=76&layout=box_count&action=like&size=small&show_faces=true&share=false&height=65&appId" width="75" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                   </li>
                   <li class="compartir" align="center"><a href="index.php"><button type="button" class="btn btn-warning color-inicio">inicio</button></a></li>
 

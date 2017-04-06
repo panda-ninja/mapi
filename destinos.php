@@ -189,6 +189,10 @@ $con=conectar();
                                     </div>
                                     <div class="destinos-marco">
                                           <h5>6.-EL CAÑON DEL COLCA</h5>
+                                          <?php 
+                                                echo '<img src="img/colca.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                                echo '<img src="img/colca1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                          ?>
                                           <p>El Valle del Colca está ubicado en parte noreste de Arequipa en la provincia de Caylloma. Allí se puede realizar diversas actividades como los deportes de aventura, la experiencia del turismo vivencial en las comunidades nativas y la contemplación de la naturaleza en todo su esplendor. Es posible divisar llamas, alpacas guanacos, vicuñas y vizcachas en su hábitat natural. Asimismo, se puede observar las andenerías construidas por los collaguas y cabanas, culturas aborígenes con una rica tradición. A través de 100 km de recorrido, podemos visitar Cabanoconde, Pinchollo, Maca, Achoma, Caporaque, Yanque, pueblos pintorescos con iglesias barrocas coloniales.</p>
                                     </div>
                                     <div class="destinos-marco">
