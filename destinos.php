@@ -1,3 +1,19 @@
+<?php include('include/funciones.php'); ?>
+<?php include('conexion.php');
+$con=conectar();
+//aqui se almacenan los datos del tours en peru
+      $datosp= "SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='1' and P.estado!=0 ORDER BY P.duracion";
+      $tablap = $con->query($datosp);
+//$paquete_lista = $con->query($tabla);
+//aqui se almacena los datos del canimo inca
+      $datoscif="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='3' and P.estado!=0 ORDER BY P.duracion";//buscamos
+      $tablacif=$con->query($datoscif);
+//aqui se almacena los datos de tours clasicos
+      $datoscic="SELECT P.idpaquetes,P.titulo,P.duracion FROM tpaquetescategoria PC INNER JOIN tpaquetes P ON PC.idpaquetes = P.idpaquetes INNER JOIN tcategoria C ON C.idcategoria = PC.idcategoria where PC.idcategoria='2' and P.estado!=0 ORDER BY P.duracion";
+      $tablacic=$con->query($datoscic);
+      $nosotros="SELECT imagen FROM titinerario";
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,87 +35,59 @@
       		
       	</header>
       	<div class="container ">
-      	      <div class="col-md-4 col-sm-12 full">
-      			<section >
-      				<h5 class="subtitulos">tours de 1 a 30 dias, incluye transporte, alimentos y más</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="sidebar.php">Tour 5 Dias Clasico Inca:Cusco City Tour , Valle Sagrado, Machupicchu</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+      	           <div class="col-md-4 col-sm-12 full">
+                        <section >
+                        <h5 class="subtitulos">CONOCE NUESTRO PERU</h5>
+                              <ul id="listas" class="full">
+                                    <?php
+                                    while ($user =mysqli_fetch_array($tablap) )
+                                    {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
+                                          
+                                    }
+                               ?>
+                              </ul>
+                        </section>
+                                    <section >
+                              <h5 class="subtitulos">Camino Inca a Machu Picchu</h5>
+                              <ul id="listas" class="full">
+                                    <?php
+                                    while ($user =mysqli_fetch_array($tablacif) )
+                                    {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
+                                          
+                                    }
+                                    
+                                    ?>
 
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en todo el peru</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
-
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en Sudamerica</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
-
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Tours en Cusco</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                              </ul>
+                        </section>
+                        <section >
+                              <h5 class="subtitulos">Tours en Cusco</h5>
+                              <ul id="listas" class="full">
+                                    <?php
+                                    while ($user =mysqli_fetch_array($tablacic) )
+                                    {
+                                                echo '<li>';
+                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].'</a>';                                                
+                                          
+                                    }
+                                    ?>
  
-      				</ul>
-      			</section>
-      			<section >
-      				<h5 class="subtitulos">Trekking a  Machupicchu</h5>
-      				<ul id="listas" class="full">
-      					<li>
-      						<a href="#">Tours a machupicchu en un dia</a>
-      					</li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repudiandae!</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, esse.</a></li>
-      					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque natus ex aliquam.</a></li>
+                              </ul>
+                        </section>
 
-      				</ul>
-      			</section>
                         <section>
                               <h5 class="subextra"> opiniones de nuestros pasajeros</h5>
                               <div class="orden">
-                                    <p class="comentarios">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, maiores praesentium architecto officia odit atque minima ipsam eaque tempora. Perferendis!
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officia delectus culpa, enim incidunt alias ratione veniam quibusdam. Porro, necessitatibus!</p>
+                                    <p class="comentarios">Sí, sin duda lo recomendaría. Todos recogida, excursiones y alojamiento eran perfecto. También fueron muy útiles para ajustar algunos de los viajes de conjunto a nuestras necesidades. Sin duda, usted puede encontrar opciones más baratas una vez en el suelo a través de una variedad de agencias..<a href="testimonios.php">(leer mas)</a></p>
                                     <p>
-                                          <strong class="autores">nombre:</strong>josue luis mancilla
+                                          <strong class="autores">nombre:</strong>LEANNE BROOME
                                           <br>
-                                          <strong class="autores">pais:</strong> peru <br>
-                                          <strong class="autores">fecha:</strong> 15/15/15
-                                    </p>
-                              </div>
-                              <div class="orden">
-                                    <p class="comentarios">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, maiores praesentium architecto officia odit atque minima ipsam eaque tempora. Perferendis!
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero officia delectus culpa, enim incidunt alias ratione veniam quibusdam. Porro, necessitatibus!</p>
-                                    <p>
-                                          <strong class="autores">nombre:</strong>josue luis mancilla
-                                          <br>
-                                          <strong class="autores">pais:</strong> peru <br>
-                                          <strong class="autores">fecha:</strong> 15/15/15
+                                          <strong class="autores">pais:</strong> Australia <br>
+                                          <strong class="autores">fecha:</strong> 12/13/15
                                     </p>
                               </div>
                               <hr>
@@ -107,7 +95,8 @@
                                     <a href="testimonios.php">miles de testimonios mas...</a>
                               </p>
                         </section>
-      		</div>
+                  </div>
+
 
       		<div class="col-md-8 col-sm-12 ">
 		      	<div>
@@ -130,6 +119,11 @@
                                     <img src="img/peru.png" alt="" class="imagen-peru">
                                     <div class="destinos-marco">
                                     <h5>1.-CUSCO: Capital Arqueológica de los Incas</h5>
+                                          <?php 
+                                                
+                                                echo '<img src="img/cusco-plaza.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                                echo '<img src="img/cusco-plaza1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                          ?>
                                           <p>
                                                 Aquí en Cusco el tiempo pasa deprisa porque hay tanto
                                                 por conocer que su estadía le parecerá corta. Por eso,
@@ -148,6 +142,11 @@
                                     </div>
                                     <div class="destinos-marco">
                                     <h5>2.-MACHUPICCHU:</h5>
+                                          <?php 
+                                                
+                                                echo '<img src="img/machu-picchu.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                                echo '<img src="img/machu-picchu1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                          ?>
                                           <p>
                                                 Declarado Patrimonio de la
                                                 Humanidad por la Unesco y elegido como una de las
@@ -158,10 +157,18 @@
                                     </div>
                                     <div class="destinos-marco">
                                           <h5>3.-VALLE SAGRADO DE LOS INCAS:</h5>
+                                          <?php 
+                                                echo '<img src="img/sacred-valley.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                                echo '<img src="img/sacred-valley1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                          ?>
                                           <p>Asi se llama al extremo del extenso valle de Urubamba, entre los pueblos de Ollantaytambo y Pisac, ubicado a corta distancia de la ciudad de Cusco en donde se concentraron desde el incanato las zonas agrícolas ganaderas y hermosos pueblos. <br> Al igual que Machu Picchu, los más importantes complejos ceremoniales en el corazón del Valle Sagrado fueron construidos a mediados del siglo XV, durante el reinado del primer gobernante histórico inca, Pachacuti Yupanqui (1438-1471). Las ruinas de Pisac y Ollantaytambo brindan testimonio de la habilidad de los incas para combinar las formas del paisaje natural con la arquitectura ceremonial en piedra y los conjuntos de terrazas de cultivos adyacentes. Dichas ciudadelas constituían lugares aptos para la iniciación de los expertos en rituales, en virtud de la proximidad y las vistas de los picos montañosos que las rodean.</p>
                                     </div>
                                     <div class="destinos-marco">
                                           <h5>4.-LIMA: CUIDAD DE LOS REYES</h5>
+                                          <?php 
+                                                echo '<img src="img/lima.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                                echo '<img src="img/lima1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                          ?>
                                           <p>
                                                 Lima es la ciudad capital de la República del Perú. Se encuentra situada en la costa central del país, a orillas del océano Pacífico, conformando una extensa y populosa área urbana conocida como Lima Metropolitana, flanqueada por el desierto costero y extendida sobre los valles de los ríos Chillón, Rímac y Lurín. Según el censo peruano de 2007, Lima contaba con más de 7,6 millones de habitantes; mientras que su aglomeración urbana contaba con más de 8,5 millones de habitantes, el 30% de la población peruana, cifras que la convierten en la ciudad más poblada del país.
 
@@ -174,6 +181,10 @@
                                     </div>
                                     <div class="destinos-marco">
                                           <h5>5.-LAGO TITICACA</h5>
+                                          <?php 
+                                                echo '<img src="img/titicaca.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                                echo '<img src="img/titicaca1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                          ?>
                                           <p>El lago Titicaca es el lago navegable más alto del mundo, ubicado a 3856 metros sobre el nivel del mar. Sus orillas y pequeñas islas, tales como Amantani y Taquile son el hogar de los aymaras y los quechuas quienes provienen de culturas ancestrales que habitaron en esta zona mucho antes que los Incas. Aquí los visitantes pueden explorar aldeas tradicionales, donde la lengua española es considerada como secundaria y en donde antiguos mitos y creencias perduran aun hoy en día.</p>
                                     </div>
                                     <div class="destinos-marco">
@@ -182,6 +193,10 @@
                                     </div>
                                     <div class="destinos-marco">
                                           <h5>7.-ISLAS BALLESTAS</h5>
+                                          <?php 
+                                                echo '<img src="img/ballestas.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                                echo '<img src="img/ballestas1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                          ?>
                                           <p>Las Islas Ballestas son unas islas que están en el Océano Pacífico, próximas a la costa del Perú.
                                           Se encuentran 260 km al sur de Lima, en las cercanías de la ciudad de Paracas en la provincia de Pisco. <br>En las ciudades de Paracas y Pisco se puede comprar boletas para hacer un tour de las Islas Ballestas en lancha. El costo normal al escribir es de S/.40 por persona. El paseo es de 2 horas – 30 minutos par llegar, 30 minutos para regresar, y una hora para ver los animales y aves. <br>
 
@@ -189,6 +204,10 @@
                                     </div>
                                     <div class="destinos-marco">
                                           <h5>8.-LINEAS DE NAZCA</h5>
+                                          <?php 
+                                                echo '<img src="img/nazca.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                                echo '<img src="img/nazca1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+                                          ?>
                                           <p>Las Líneas de Nazca, también conocidas en el mundo científico como "geoglifos", son uno de los más importantes legados de las antiguas culturas pre-incas peruanas. Ubicadas en los valles de Palpa y Nazca, en el departamento peruano de Ica, ésta enorme extensión de pampas desérticas expone sobre sus arenas enormes figuras geométricas que en perfecta armonía componen dibujos de animales, plantas, objetos, seres humanos y dioses. Sobre el origen y significado de éstas líneas, arqueólogos e investigadores de los eventos paranormales han planteado diversas teorías que interpretan al conjunto de líneas como un enorme calendario astronómico o un lugar de culto del agua construido por las culturas Cultura Paracas y Cultura Nazca.</p>
                                     </div>
                               </div>

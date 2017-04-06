@@ -17,7 +17,7 @@
 	 <?php include("header.php"); ?>
       <div class="main">
             <div class="trip">
-                  <p ><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://mapi.pandaninja.com.pe/sidebar.php?id=8">ver detalles</a></p>
+                  <p ><a href="nosotros.php"><strong class="cabecera-about">ABOUT US</strong></a><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://mapi.pandaninja.com.pe/sidebar.php?id=8">ver detalles</a></p>
             </div>
       	<header id="header2" role="banner" class="">     		
             <div class="row">

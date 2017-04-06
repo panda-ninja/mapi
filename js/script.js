@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	   
  $(window).scroll(function(){
  if ($(window).scrollTop() > 100) {
   $('#scrollToTop').fadeIn();
@@ -7,7 +8,9 @@ $(document).ready(function(){
  }
  });
 });
-
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
 function scrolltop()
 {
  $('html, body').animate({scrollTop : 0},500);
@@ -43,10 +46,34 @@ jQuery(document).ready(function($){
             $(this).removeClass('is-visible');
         }
     });
-    //close popup when clicking the esc keyboard button
+    //Cierre popup al hacer clic en el botón de teclado esc
     $(document).keyup(function(event){
         if(event.which=='27'){
             $('.cd-popup').removeClass('is-visible');
         }
     });
 });
+//efecto pop up
+jQuery(document).ready(function($){
+    //open popup
+    $('.pop-up-general').on('click', function(event){
+        event.preventDefault();
+        $('.pop-up').addClass('is-visible');
+    });
+    
+    //close popup
+    $('.pop-up').on('click', function(event){
+        if( $(event.target).is('.cd-popup-close') || $(event.target).is('.pop-up') ) {
+            event.preventDefault();
+            $(this).removeClass('is-visible');
+        }
+    });
+    //Cierre popup al hacer clic en el botón de teclado esc
+    $(document).keyup(function(event){
+        if(event.which=='27'){
+            $('.pop-up').removeClass('is-visible');
+        }
+    });
+    
+});
+

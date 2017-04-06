@@ -37,7 +37,7 @@
 	            <li class="llamar centrado">
 	            	<div class="row">
 	            		<div class="col-md-6 col-sm-6 " id="margen">
-	            			<a href="#" onclick="startOlark()"><button type='button' class='btn btn-info cabecera-boton'  ><i class="fa fa-commenting-o" aria-hidden="true"></i>  CHAT</button></a>
+	            			<a href="#" onclick="startOlark()"><button type='button' class='btn btn-info cabecera-boton' ><i class="fa fa-commenting-o" aria-hidden="true"></i>  CHAT</button></a>
 	            			<!--<button type='button' class="btn btn-danger color-anaranjado">CONSULTAS</button>-->
 	            			<button type='button' class="btn btn-danger cd-popup-trigger">CONSULTAS</button>
 								<div class="cd-popup" role="alert">
@@ -48,35 +48,35 @@
 								            <li><a href="#0">No</a></li>
 								        </ul>
 								        <a href="#0" class="cd-popup-close img-replace">Close</a>-->
-										<form class="form-horizontal" method="post" action="include/registro.php">
+										<form class="form-horizontal" method="post" action="include/registro.php" >
 											<h5 class="pop-up-titulo"><b>INFORMACION DE CONTACTO:</b></h5>
 										    <div class="form-group">
-										        <label class="control-label col-xs-2">Nombre:</label>
-										        <div class="col-xs-9">
+										        <label class="control-label col-xs-3">Nombre:</label>
+										        <div class="col-xs-8">
 										            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
 										        </div>
 										    </div>
 										    <div class="form-group">
-										        <label class="control-label col-xs-2">Apellido:</label>
-										        <div class="col-xs-9">
+										        <label class="control-label col-xs-3">Apellido:</label>
+										        <div class="col-xs-8">
 										            <input type="text" class="form-control" placeholder="Apellido" name="apellido">
 										        </div>
 										    </div>
 										    <div class="form-group">
-										        <label class="control-label col-xs-2">Email:</label>
-										        <div class="col-xs-9">
+										        <label class="control-label col-xs-3">Email:</label>
+										        <div class="col-xs-8">
 										            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="mail">
 										        </div>
 										    </div>
 										    <div class="form-group">
-										        <label class="control-label col-xs-2" >Telefono:</label>
-										        <div class="col-xs-9">
+										        <label class="control-label col-xs-3" >Telefono:</label>
+										        <div class="col-xs-8">
 										            <input type="tel" class="form-control" placeholder="Telefono" name="telefono">
 										        </div>
 										    </div>
 										    <div class="form-group">
-										        <label class="control-label col-xs-2">Comentarios:</label>
-										        <div class="col-xs-9">
+										        <label class="control-label col-xs-3">Comentarios:</label>
+										        <div class="col-xs-8">
 										            <textarea rows="3" class="form-control" placeholder="Comentarios" name="comentarios"></textarea>
 										        </div>
 										    </div>
@@ -84,7 +84,7 @@
 										    <br>
 										    <div class="form-group">
 										        <div class="col-xs-offset-3 col-xs-6">
-										            <input type="submit" class="btn btn-primary" value="Enviar">
+										            <input type="submit" class="btn btn-primary margin-bottom" value="Enviar">
 										            <!--<input type="reset" class="btn btn-default" value="Limpiar">-->
 										        </div>
 										    </div>

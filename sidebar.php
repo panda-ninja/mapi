@@ -7,6 +7,8 @@ $tabla="SELECT * FROM tpaquetes WHERE idpaquetes='$paquete_id'";
 $paquete_lista = mysqli_query($con,$tabla);
 
 $fila=mysqli_fetch_array($paquete_lista);
+//SACAR PRECIOS DE LA TABLA  TPRECIOPAQUETES
+
 
 //$datos= "SELECT * FROM tpaquetes WHERE estado!=0";
 //$tabla2 = $con->query($datos);
@@ -31,6 +33,7 @@ $fila=mysqli_fetch_array($paquete_lista);
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
   <link rel="icon" type="image/png" href="img/icono.gif" />
 </head>
 <body class="marca-agua2">
@@ -47,10 +50,16 @@ $fila=mysqli_fetch_array($paquete_lista);
 	 <?php include("header.php"); ?>
       <div class="main">
             <div class="trip">
-                  <p ><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://mapi.pandaninja.com.pe/sidebar.php?id=8">ver detalles</a></p>
+                  <p ><a href="nosotros.php"><strong class="cabecera-about">ABOUT US</strong></a><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://mapi.pandaninja.com.pe/sidebar.php?id=8">ver detalles</a></p>
             </div>
-      	<header id="header" role="banner" class="">     		
-      		
+      	<header id="header" role="banner" class="paquetes-cabecera row">  
+          <div class="col-sm-10"></div>
+          <div class=" col-sm-2 grupo-goto">
+           <h4>SOMOS PARTE DE</h4>
+           <a href="http://gotoperu.travel/"><img src="img/goto.png" alt="" ></a>
+           <p>10 años de Experiencia Autorizados por el Gobierno del Peru</p>
+           <a href="http://www.peru.travel/Search-Travel-Services/categoryid/5.aspx"><img src="img/marca-peru.jpg" alt=""></a>
+          </div>
       	</header>
 
       	<div class="container ">
@@ -74,7 +83,7 @@ $fila=mysqli_fetch_array($paquete_lista);
                                ?>
                               </ul>
                         </section>
-      			<section >
+      		              	<section >
                               <h5 class="subtitulos">Camino Inca a Machu Picchu</h5>
                               <ul id="listas" class="full">
                                     <?php
@@ -137,7 +146,105 @@ $fila=mysqli_fetch_array($paquete_lista);
 		      		<div >
 		      			<section class="paquete-lateral">
 		      				<div class="margin-bottom">
-                    <button type="button" class="btn btn-warning reservar">¿Deseas <br>Reservar?</button>
+                  <button type="button" class="btn btn-warning reservar pop-up-general">¿Deseas <br>Reservar?</button>
+                    <div class="pop-up" role="alert">
+                      <div class="popup-contenedor">
+                        <form class="form-horizontal"  method="post" action="">
+                          <h5 class="pop-up-titulo"><b><?php echo $fila["duracion"].' DIAS: '.$fila["titulo"]; ?></b></h5>
+                            <h5 ><b>RESERVAR ESTE TOUR:</b></h5>
+                              <div class="form-group">
+                                  <label class="control-label col-xs-3">Nombre:</label>
+                                  <div class="col-xs-8">
+                                      <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                                  </div>
+                              </div>
+                                <div class="form-group">
+                                  <label class="control-label col-xs-3">Email:</label>
+                                  <div class="col-xs-8">
+                                      <input type="email" name="mail" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="control-label col-xs-3" >Telefono:</label>
+                                  <div class="col-xs-8">
+                                      <input type="tel" name="telefono" class="form-control" placeholder="Telefono">
+                                  </div>
+                              </div>
+                                  <div class="form-group">
+                                        <label class="control-label col-xs-3" >Fecha de viaje:</label>
+                                        <div class="col-xs-4">
+                                          <input type="text" name="fecha" class="form-control" id="datepicker" placeholder="01/01/2017">
+
+                                        </div>
+                                        <div class="col-xs-1"><span class="glyphicon glyphicon-calendar"></div>
+
+                                  </div>
+                              <div class="form-group">
+                                  <label class="control-label col-xs-3">País:</label>
+                                  <div class="col-xs-8">
+                                      <input type="text" name="pais" class="form-control" placeholder="Pais">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="control-label col-xs-3" >Nro Pasajeros:</label>
+                                  <div class="col-xs-8">
+                                      <input type="tel" name="pasajeros" class="form-control" placeholder="N°">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="control-label col-xs-3">Comentarios:</label>
+                                  <div class="col-xs-8">
+                                      <textarea rows="3" name="comentarios" class="form-control" placeholder="Comentarios"></textarea>
+                                  </div>
+                              </div>
+
+                              <br>
+                              <div class="form-group">
+                                  <div class="col-xs-offset-2 col-xs-9">
+                                      <input type="submit" name="enviar" class="btn btn-primary margin-bottom" value="Enviar">
+                                  </div>
+                              </div>
+                              <?php 
+                              if (isset($_POST['enviar'])) {
+
+                                $nombre=$_POST['nombre'];
+                                $mail=$_POST['mail'];
+                                $telefono=$_POST['telefono'];
+                                $fecha=$_POST['fecha'];
+                                $pais=$_POST['pais'];
+                                $pasajeros=$_POST['pasajeros'];
+                                $comentarios=$_POST['comentarios'];
+
+                                //$sql="INSERT INTO tcliente('nombres','nacionalidad','email','telefono') VALUES ($nombre,$pais,$mail,$telefono)";
+                                $sql="INSERT INTO tcontacto(nombres,email,telefono,pais,pasajeros,comentario) VALUES ('$nombre','$mail','$telefono','$pais','$pasajeros','$comentarios')";
+                                mysqli_query($con,$sql);
+                                //--------------------------------------------------------------------------------------
+                                $email_to = "josue_luistj@hotmail.com";
+                                $email_subject = "Contacto desde el sitio web";
+
+                                $email_message = "Detalles del formulario de contacto:\n\n";
+                                $email_message .= "Nombre: " . $_POST['nombre'] . "\n";
+                                $email_message .= "email: " . $_POST['mail'] . "\n";
+                                $email_message .= "telefono: " . $_POST['telefono'] . "\n";
+                                $email_message .= "fecha" . $_POST['fecha'] . "\n";
+                                $email_message .= "pais" . $_POST['pais'] . "\n";
+                                $email_message .= "pasajeros" . $_POST['pasajeros'] . "\n";
+                                $email_message .= "comentarios" . $_POST['comentarios'] . "\n\n";
+
+                                //echo '<script src="">alert("Formulario  no enviado!");window.location.href="http://www.todoexpertos.com/categorias/tecnologia-e-internet/desarrollo-de-sitios-web/javascript/respuestas/171252/cartel-despues-de-enviar-un-formulario";</script>';
+
+                                // Ahora se envía el e-mail usando la función mail() de PHP
+                                $headers = 'From: '.$_POST['mail']."\r\n".
+                                'Reply-To: '.$_POST['mail']."\r\n" .
+                                'X-Mailer: PHP/' . phpversion();  
+                                mail($email_to, $email_subject, $email_message, $headers) ;                             
+                              }
+                              ?>
+                          </form>
+                      </div> <!-- popup-contenedor -->
+                    </div> <!-- popup -->
+
+
 		      					<a href="#" class="chatea"><button type="button" class="btn btn-success"  onclick="startOlark()">¡ CHATEA ! </button></a>
 		      				</div>
                                           <li class="marcador">
@@ -175,8 +282,9 @@ $fila=mysqli_fetch_array($paquete_lista);
                                           <h3 class="hotel"><i class="fa fa-bed" aria-hidden="true"></i>HOTELES</h3>
                                                 <div class="panel panel-danger">
                                                 <div class="panel-heading">
-                                                Aqui podra escoger la acomodacion de sus hoteles</div>
+                                                PRECIO POR PERSONA BASADO EN ACOMODACION DOBLE EN USD $</div>
                                                 <div class="panel-body">
+
                                                 <table class="table">
                                                 <thead>
                                                 <tr>
@@ -187,20 +295,41 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                     <tbody>
                                                 <tr>
 
-                                                     <td>1</td>
-                                                     <td>hoteles 5 estrellas</td>
+                                                     <td>USD                                               
+                                                     <?php 
+                                                      $tablaprecio="SELECT * FROM tpreciopaquetes WHERE idpaquetes='$paquete_id' AND estrellas=2";
+                                                      $precio_lista=mysqli_query($con,$tablaprecio);
+                                                      $filaprecio=mysqli_fetch_array($precio_lista);
+                                                      echo $filaprecio['precio_d'];
+                                                    ?>   
+                                                    </td>
+                                                     <td>2 estrellas: Apu Huascaran/ Triunfo/ SevenMapi</td>
                                                       </tr>
                                                 <tr>
-                                                     <td>2</td>
-                                                     <td>hoteles 4 estrellas</td>
+                                                     <td>USD 
+                                                     <?php 
+                                                      $tablaprecio="SELECT * FROM tpreciopaquetes WHERE idpaquetes='$paquete_id' AND estrellas=3";
+                                                      $precio_lista=mysqli_query($con,$tablaprecio);
+                                                      $filaprecio=mysqli_fetch_array($precio_lista);
+                                                      echo $filaprecio['precio_d'];
+                                                    ?>   
+                                                     </td>
+                                                     <td>3 estrellas: San Agustin/ Garcilazo/ Casa Andina</td>
                                                       </tr>
                                                 <tr>
-                                                     <td>3</td>
-                                                     <td>hoteles 3 estrellas</td>
+                                                     <td>USD 
+                                                     <?php 
+                                                      $tablaprecio="SELECT * FROM tpreciopaquetes WHERE idpaquetes='$paquete_id' AND estrellas=4";
+                                                      $precio_lista=mysqli_query($con,$tablaprecio);
+                                                      $filaprecio=mysqli_fetch_array($precio_lista);
+                                                      echo $filaprecio['precio_d'];
+                                                    ?>  
+                                                     </td>
+                                                     <td>4 estrellas: Costa del Sol/ Sonesta/ Andean Wings</td>
                                                       </tr>
                                                 <tr>
-                                                     <td>4</td>
-                                                     <td>hoteles 4 estrellas</td>
+                                                     <td>INQUIRE</td>
+                                                     <td>5 estrellas: JWMarriot/ Aranwa</td>
                                                       </tr>
                                                 </tbody>
                                                 </table>
@@ -220,16 +349,12 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 </thead>
                                                 <tbody>
                                                 <tr>
-                                                     <td>1</td>
-                                                     <td>Belmont Hiram Bingham</td>
-                                                </tr>
-                                                <tr>
-                                                     <td>3</td>
-                                                     <td>Visitandome</td>
-                                                </tr>
-                                                <tr>
-                                                     <td>4</td>
+                                                     <td>INCLUIDO</td>
                                                      <td>Expedition</td>
+                                                </tr>
+                                                <tr>
+                                                     <td>$29 ADICIONAL<p>(por persona)</p></td>
+                                                     <td>Visitandome (PANORAMICO)</td>
                                                 </tr>
                                                 </tbody>
                                                    </table>
@@ -253,19 +378,19 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 </thead>
                                                     <tbody>
                                                 <tr>
-                                                     <td>Mark</td>
+                                                     <td>INQUIRE</td>
                                                      <td>Alimentacion completa(almuerzos y cenas)</td>
                                                       </tr>
                                                 <tr>
-                                                     <td>2</td>
+                                                     <td>INQUIRE</td>
                                                      <td>MACHUPICCHU(de Tour compartido a Tour privado)</td>
                                                       </tr>
                                                 <tr>
-                                                     <td>3</td>
+                                                     <td>INQUIRE</td>
                                                      <td>VALLE SAGRADO(de Tour compartido a Tour privado)</td>
                                                       </tr>
                                                 <tr>
-                                                     <td>4</td>
+                                                     <td>INQUIRE</td>
                                                      <td>CITY TOUR CUSCO(de Tour compartido a Tour privado)</td>
                                                       </tr>
                                                 </tbody>
@@ -292,6 +417,7 @@ $fila=mysqli_fetch_array($paquete_lista);
  	<script src="js/bootstrap.js"></script>
  	<script src="js/jquery-3.1.1.min.js"></script>
  	<script src="js/script.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
         <!-- begin olark code -->
 <script type="text/javascript" async>
 ;(function(o,l,a,r,k,y){if(o.olark)return;
