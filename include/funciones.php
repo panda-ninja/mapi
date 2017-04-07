@@ -15,14 +15,14 @@ function detalles($fila){
       echo '<div class="letra-cambio">';
       if ($fila["dia"]==1) {
             //echo '<p class="margen-imagen-itinerario">';
-            echo '<img src="img/'.$fila["imagen"].'.jpg" alt="" class="imagen-paquetes img-responsive" >';
-            echo '<img src="img/'.$fila["imagen"].'1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+            echo '<img src="http://mapi.pandaninja.com.pe/img/'.$fila["imagen"].'.jpg" alt="" class="imagen-paquetes img-responsive" >';
+            echo '<img src="http://mapi.pandaninja.com.pe/img/'.$fila["imagen"].'1.jpg" alt="" class="imagen-paquetes img-responsive" >';
             //echo '</p>';   
       }
       else {
             //echo '<p align="center">';
-            echo '<img src="img/'.$fila["imagen"].'.jpg" alt="" class="imagen-paquetes img-responsive" >';
-            echo '<img src="img/'.$fila["imagen"].'1.jpg" alt="" class="imagen-paquetes img-responsive" >';
+            echo '<img src="http://mapi.pandaninja.com.pe/img/'.$fila["imagen"].'.jpg" alt="" class="imagen-paquetes img-responsive" >';
+            echo '<img src="http://mapi.pandaninja.com.pe/img/'.$fila["imagen"].'1.jpg" alt="" class="imagen-paquetes img-responsive" >';
             //echo '</p>';            
       }
 

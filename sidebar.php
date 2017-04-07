@@ -1,12 +1,14 @@
 <?php include('include/funciones.php'); ?>
 <?php include('conexion.php');
+//$aux=$_POST['idpaquetes'];
 $con=conectar();
-$paquete_id=$_GET["id"];
+$paquete_title=str_replace('-', ' ', str_replace('_', '/', $_GET["title"]));
 //$tabla="SELECT * FROM tpaquetes WHERE idpaquetes='$paquete_id'";
-$tabla="SELECT * FROM tpaquetes WHERE idpaquetes='$paquete_id'";
+$tabla="SELECT * FROM tpaquetes WHERE titulo='$paquete_title'";
 $paquete_lista = mysqli_query($con,$tabla);
 
 $fila=mysqli_fetch_array($paquete_lista);
+$aux=$fila["idpaquetes"];
 //SACAR PRECIOS DE LA TABLA  TPRECIOPAQUETES
 
 
@@ -30,11 +32,11 @@ $fila=mysqli_fetch_array($paquete_lista);
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Machupicchu Company</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.min.css">
-  <link rel="icon" type="image/png" href="img/icono.gif" />
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/jquery-ui.min.css">
+  <link rel="icon" type="image/png" href="../../img/icono.gif" />
 </head>
 <body class="marca-agua2">
 <div id="fb-root"></div>
@@ -56,9 +58,9 @@ $fila=mysqli_fetch_array($paquete_lista);
           <div class="col-sm-10"></div>
           <div class=" col-sm-2 grupo-goto">
            <h4>SOMOS PARTE DE</h4>
-           <a href="http://gotoperu.travel/"><img src="img/goto.png" alt="" ></a>
+           <a href="http://gotoperu.travel/"><img src="http://mapi.pandaninja.com.pe/img/goto.png" alt="" ></a>
            <p>10 años de Experiencia Autorizados por el Gobierno del Peru</p>
-           <a href="http://www.peru.travel/Search-Travel-Services/categoryid/5.aspx"><img src="img/marca-peru.jpg" alt=""></a>
+           <a href="http://www.peru.travel/Search-Travel-Services/categoryid/5.aspx"><img src="http://mapi.pandaninja.com.pe/img/marca-peru.jpg" alt=""></a>
           </div>
       	</header>
 
@@ -71,13 +73,13 @@ $fila=mysqli_fetch_array($paquete_lista);
                                     <?php
                                     while ($user =mysqli_fetch_array($tablap) )
                                     {
-                                          if ($paquete_id==$user["idpaquetes"]) {
+                                          if ($paquete_title==$user["titulo"]) {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';
+                                                echo'<a href="../../paquetes-turistico/'.strtolower(str_replace(' ', '-', $user["titulo"])).'/" class="subpagina">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';
                                           }
                                           else {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
+                                                echo'<a href="../../paquetes-turistico/'.strtolower(str_replace(' ', '-', $user["titulo"])).'/">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
                                           }
                                     }
                                ?>
@@ -89,13 +91,13 @@ $fila=mysqli_fetch_array($paquete_lista);
                                     <?php
                                     while ($user =mysqli_fetch_array($tablacif) )
                                     {
-                                          if ($paquete_id==$user["idpaquetes"]) {
+                                          if ($paquete_title==$user["titulo"]) {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';
+                                                echo'<a href="../../paquetes-turistico/'.strtolower(str_replace(' ', '-', $user["titulo"])).'/" class="subpagina">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';
                                           }
                                           else {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
+                                                echo'<a href="../../paquetes-turistico/'.strtolower(str_replace(' ', '-', str_replace('/', '_', $user["titulo"]))).'/">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';                                                
                                           }
                                     }
                                     
@@ -109,13 +111,13 @@ $fila=mysqli_fetch_array($paquete_lista);
                                     <?php
                                     while ($user =mysqli_fetch_array($tablacic) )
                                     {
-                                          if ($paquete_id==$user["idpaquetes"]) {
+                                          if ($paquete_title==$user["titulo"]) {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'" class="subpagina">'.$user["titulo"].'</a>';
+                                                echo'<a href="../../paquetes-turistico/'.strtolower(str_replace(' ', '-', str_replace('/', '_', $user["titulo"]))).'/" class="subpagina">'.$user["titulo"].'</a>';
                                           }
                                           else {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].'</a>';                                                
+                                                echo'<a href="../../paquetes-turistico/'.strtolower(str_replace(' ', '-', $user["titulo"])).'/">'.$user["titulo"].'</a>';                                                
                                           }
                                     }
                                     ?>
@@ -223,15 +225,16 @@ $fila=mysqli_fetch_array($paquete_lista);
                                 //--------------------------------------------------------------------------------------
                                 $email_to = "josue_luistj@hotmail.com";
                                 $email_subject = "Contacto desde el sitio web";
-
+                                $url = $_SERVER['PHP_SELF'];
                                 $email_message = "Detalles del formulario de contacto:\n\n";
                                 $email_message .= "Nombre: " . $_POST['nombre'] . "\n";
                                 $email_message .= "email: " . $_POST['mail'] . "\n";
                                 $email_message .= "telefono: " . $_POST['telefono'] . "\n";
-                                $email_message .= "fecha" . $_POST['fecha'] . "\n";
-                                $email_message .= "pais" . $_POST['pais'] . "\n";
+                                $email_message .= "fecha del viaje" . $_POST['fecha'] . "\n";
+                                $email_message .= "pais:" . $_POST['pais'] . "\n";
                                 $email_message .= "pasajeros" . $_POST['pasajeros'] . "\n";
                                 $email_message .= "comentarios" . $_POST['comentarios'] . "\n\n";
+                                $email_message .= "pagina desde donde envio el pedido:" . $_POST['comentarios'] . "\n\n";
 
                                 //echo '<script src="">alert("Formulario  no enviado!");window.location.href="http://www.todoexpertos.com/categorias/tecnologia-e-internet/desarrollo-de-sitios-web/javascript/respuestas/171252/cartel-despues-de-enviar-un-formulario";</script>';
 
@@ -265,9 +268,14 @@ $fila=mysqli_fetch_array($paquete_lista);
                                              <?php 
 
                                                 for ($i=1; $i <= $fila["duracion"]; $i++) { 
-                                                      $tabla2="SELECT iditinerario,dia,titulo,descripcion,imagen,idpaquetes FROM titinerario WHERE idpaquetes='$paquete_id' AND dia='$i'";
+                                                      $tabla2="SELECT * FROM titinerario WHERE idpaquetes='$aux' AND dia='$i'";
+                                                      
+                                                      //$tabla2="SELECT TI.iditinerario,TI.dia,TI.titulo,TI.descripcion,TI.imagen,TI.idpaquetes FROM tpaquetes P INNER JOIN titinerario TI ON TI.idpaquetes=P.idpaquetes WHERE TI.dia='$i' AND P.idpaquetes='$aux'";
+
                                                       $paquete_lista2 = mysqli_query($con,$tabla2);
+
                                                       $fila2=mysqli_fetch_array($paquete_lista2);
+
                                                       detalles($fila2);
                                                 }
                                               ?>   
@@ -300,7 +308,8 @@ $fila=mysqli_fetch_array($paquete_lista);
 
                                                      <td>USD                                               
                                                      <?php 
-                                                      $tablaprecio="SELECT * FROM tpreciopaquetes WHERE idpaquetes='$paquete_id' AND estrellas=2";
+                                                      $tablaprecio="SELECT * FROM tpreciopaquetes WHERE idpaquetes='$aux' AND estrellas=2";
+                                                      
                                                       $precio_lista=mysqli_query($con,$tablaprecio);
                                                       $filaprecio=mysqli_fetch_array($precio_lista);
                                                       echo $filaprecio['precio_d'];
@@ -311,7 +320,7 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 <tr>
                                                      <td>USD 
                                                      <?php 
-                                                      $tablaprecio="SELECT * FROM tpreciopaquetes WHERE idpaquetes='$paquete_id' AND estrellas=3";
+                                                      $tablaprecio="SELECT * FROM tpreciopaquetes WHERE idpaquetes='$aux' AND estrellas=3";
                                                       $precio_lista=mysqli_query($con,$tablaprecio);
                                                       $filaprecio=mysqli_fetch_array($precio_lista);
                                                       echo $filaprecio['precio_d'];
@@ -322,7 +331,7 @@ $fila=mysqli_fetch_array($paquete_lista);
                                                 <tr>
                                                      <td>USD 
                                                      <?php 
-                                                      $tablaprecio="SELECT * FROM tpreciopaquetes WHERE idpaquetes='$paquete_id' AND estrellas=4";
+                                                      $tablaprecio="SELECT * FROM tpreciopaquetes WHERE idpaquetes='$aux' AND estrellas=4";
                                                       $precio_lista=mysqli_query($con,$tablaprecio);
                                                       $filaprecio=mysqli_fetch_array($precio_lista);
                                                       echo $filaprecio['precio_d'];
@@ -413,14 +422,14 @@ $fila=mysqli_fetch_array($paquete_lista);
                   <li >
                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FGOTOPERUcom%2F%3Ffref%3Dts&width=76&layout=box_count&action=like&size=small&show_faces=true&share=false&height=65&appId" width="75" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                   </li>
-                  <li class="compartir" align="center"><a href="index.php"><button type="button" class="btn btn-warning color-inicio">inicio</button></a></li>
+                  <li class="compartir" align="center"><a href="http://mapi.pandaninja.com.pe/"><button type="button" class="btn btn-warning color-inicio">inicio</button></a></li>
 
             </ul>
 </div>
- 	<script src="js/bootstrap.js"></script>
- 	<script src="js/jquery-3.1.1.min.js"></script>
- 	<script src="js/script.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
+ 	<script src="../../js/bootstrap.js"></script>
+ 	<script src="../../js/jquery-3.1.1.min.js"></script>
+ 	<script src="../../js/script.js"></script>
+    <script src="../../js/jquery-ui.min.js"></script>
         <!-- begin olark code -->
 <script type="text/javascript" async>
 ;(function(o,l,a,r,k,y){if(o.olark)return;

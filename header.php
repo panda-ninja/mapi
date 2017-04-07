@@ -3,14 +3,14 @@
 	        <nav>
 	          <ul class="nav nav-justified me">
 	          	<li class="chat centrado">
-	            	<a href="index.php" class="margenes"><img src="img/logo.png" alt="" class=" img-responsive largo"></a>
+	            	<a href="http://mapi.pandaninja.com.pe/" class="margenes"><img src="http://mapi.pandaninja.com.pe/img/logo.png" alt="" class=" img-responsive largo"></a>
 	            </li>
 	            <li class="chat centrado hidden-xs">
-	            	<a href="index.php" class="margenes"><img src="img/logo2.jpg" alt="" class=" img-responsive imagen-logo" id="link-sin-borde">
+	            	<a href="http://mapi.pandaninja.com.pe/" class="margenes"><img src="http://mapi.pandaninja.com.pe/img/logo2.jpg" alt="" class=" img-responsive imagen-logo" id="link-sin-borde">
 	            	</a>
 	            </li>
 	            <li class="chat centrado">
-	            	<a href="index.php" class="margenes"><img src="img/tripadvisor.jpg" alt="" class=" img-responsive largo2"></a>
+	            	<a href="http://mapi.pandaninja.com.pe/" class="margenes"><img src="http://mapi.pandaninja.com.pe/img/tripadvisor.jpg" alt="" class=" img-responsive largo2"></a>
 	            </li>
 	            <li class="llamanos centrado hidden-xs">
 	            <div class="row">
@@ -93,7 +93,7 @@
 								</div> <!-- cd-popup -->
 	            		</div>
 		            	<div class="col-md-6  col-sm-6 hidden-xs margin-15 paises">
-		            		<img src="img/foto.jpg" alt="" class="foto-cabecera">
+		            		<img src="http://mapi.pandaninja.com.pe/img/foto.jpg" alt="" class="foto-cabecera">
 		            	</div>
 	            	</div>
 	            	<p class="correo-cabecera">info@machupicchu.company</p>

@@ -82,7 +82,10 @@ $con=conectar();
                                     while ($user =mysqli_fetch_array($tabla) )
                                     {
                                                 echo '<li>';
-                                                echo'<a href="sidebar.php?id='.$user["idpaquetes"].'">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';
+                                                echo'<a href="paquetes-turistico/'.strtolower(str_replace(' ', '-', $user["titulo"])).'/">'.$user["titulo"].' - <strong>('.$user["duracion"].' dias)</strong></a>';
+                                              //  echo '<form action="" method="post">';
+                                               // echo '<input type="hidden" name="'.$user["idpaquetes"].'" >';
+                                                //echo '</form>';
                                     }
 
                                      ?>
@@ -95,7 +98,7 @@ $con=conectar();
                                     while ( $user3 =mysqli_fetch_array($tablacif)) 
                                     {
                                           echo '<li>';
-                                          echo '<a href="sidebar.php?id='.$user3["idpaquetes"].'">'.$user3["titulo"].' - <strong>('.$user3["duracion"].' dias)</strong></a>';
+                                          echo '<a href="paquetes-turistico/'.strtolower(str_replace(' ', '-', str_replace('/', '_', $user3["titulo"]))).'/">'.$user3["titulo"].' - <strong>('.$user3["duracion"].' dias)</strong></a>';
                                     }
                                     
                                     ?>
@@ -109,7 +112,7 @@ $con=conectar();
                                     while ( $user4 =mysqli_fetch_array($tablacic)) 
                                     {
                                           echo '<li>';
-                                          echo '<a href="sidebar.php?id='.$user4["idpaquetes"].'">'.$user4["titulo"].'</a>';
+                                          echo '<a href="paquetes-turistico/'.strtolower(str_replace(' ', '-', $user4["titulo"])).'/">'.$user4["titulo"].'</a>';
                                     }
                                     ?>
  
