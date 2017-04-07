@@ -136,6 +136,11 @@ header{
 	display: inline-block;
 	margin: 0.4em 1em;
 }
+.icono-portada2{
+	width: 33px;
+	display: inline-block;
+	padding-right: 3px;
+}
 .bloque-iconos{
 	margin-left: 150px;
 }
@@ -1334,4 +1339,9 @@ xpopup
 }
 .trip p a:hover{
 	text-decoration: none;
+}
+
+.achicar{
+	width: 150px;
+	display: inline-block;
 }

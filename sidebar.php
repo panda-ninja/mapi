@@ -33,7 +33,7 @@ $aux=$fila["idpaquetes"];
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Machupicchu Company</title>
 	<link rel="stylesheet" href="http://machupicchu.company/css/bootstrap.css">
-	<link rel="stylesheet" href="http://machupicchu.company/css/style.css">
+	<link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="http://machupicchu.company/css/font-awesome.min.css">
   <link rel="stylesheet" href="http://machupicchu.company/css/jquery-ui.min.css">
   <link rel="icon" type="image/png" href="http://machupicchu.company/img/icono.gif" />
@@ -290,7 +290,7 @@ $aux=$fila["idpaquetes"];
                                            if ($fila["duracion"]!=1) {
                                                  
                                           ?>       
-                                          <h3 class="hotel"><i class="fa fa-bed" aria-hidden="true"></i>HOTELES</h3>
+                                          <h3 class="hotel"><img src="http://machupicchu.company/img/9.png" alt="" class="icono-portada2 img-responsive">TOUR +<i class="fa fa-bed" aria-hidden="true"></i>HOTELES</h3>
                                                 <div class="panel panel-danger">
                                                 <div class="panel-heading">
                                                 PRECIO POR PERSONA BASADO EN ACOMODACION DOBLE EN USD $</div>
@@ -366,7 +366,10 @@ $aux=$fila["idpaquetes"];
                                                 </tr>
                                                 <tr>
                                                      <td>$29 ADICIONAL<p>(por persona)</p></td>
-                                                     <td>Visitandome (PANORAMICO)</td>
+                                                     <td>Visitandome (PANORAMICO) <br>
+                                                          <img src="../../img/perurail.jpg" alt=""  class="thumbnail achicar">
+                                                          <img src="../../img/perurail2.jpg" alt=""  class="thumbnail achicar">
+                                                     </td>
                                                 </tr>
                                                 </tbody>
                                                    </table>
@@ -375,7 +378,7 @@ $aux=$fila["idpaquetes"];
                                           <?php 
                                           }
                                           ?> 
-                                          <h3>SERVICIOS ADICIONALES</h3>
+                                          <!--<h3>SERVICIOS ADICIONALES</h3>
                                           <div class="panel panel-danger">
                                                 <div class="panel-heading">
                                                 si desea algunos de estos servicios recuerde especificarlo al contactarnos</div>
@@ -408,8 +411,8 @@ $aux=$fila["idpaquetes"];
                                                 </tbody>
                                                    </table>
                                                 </div>
-                                          </div>
-                                                <div class="fb-comments" data-href="https://www.facebook.com/Machupicchu-Company-1326498557442849/?fref=ts" data-width="100%"></div>
+                                          </div>-->
+                                    <div class="fb-comments" data-href="https://www.facebook.com/Machupicchu-Company-1326498557442849/?fref=ts" data-width="100%"></div>
 		      			</section>
 		      		</div>
 		      	</div>
@@ -447,6 +450,7 @@ olark.identify('8407-174-10-8084');
         olark('api.box.expand');
     }</script>
 <!-- end olark code -->
+
 </body>
 <?php include("footer.php"); ?>
 </html>
