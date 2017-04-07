@@ -253,8 +253,7 @@ $aux=$fila["idpaquetes"];
 		      					<a href="#" class="chatea"><button type="button" class="btn btn-success"  onclick="startOlark()">¡ CHATEA ! </button></a>
 		      				</div>
                                           <li class="marcador">
-                                 
-                                                <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fgotoperu.com%2F&layout=box_count&size=small&mobile_iframe=true&width=81&height=40&appId" width="85" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                            <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2FGOTOPERUcom%2F&layout=box_count&size=small&mobile_iframe=true&width=81&height=40&appId" width="85" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                                               
                                           </li>
 		      			</section>
