@@ -223,7 +223,7 @@ $aux=$fila["idpaquetes"];
                                 $sql="INSERT INTO tcontacto(nombres,email,telefono,pais,pasajeros,comentario) VALUES ('$nombre','$mail','$telefono','$pais','$pasajeros','$comentarios')";
                                 mysqli_query($con,$sql);
                                 //--------------------------------------------------------------------------------------
-                                $email_to = "josue_luistj@hotmail.com";
+                                $email_to = "info@machupicchu.company";
                                 $email_subject = "Contacto desde el sitio web";
                                 $url = $_SERVER['PHP_SELF'];
                                 $email_message = "Detalles del formulario de contacto:\n\n";
