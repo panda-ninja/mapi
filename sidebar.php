@@ -32,11 +32,11 @@ $aux=$fila["idpaquetes"];
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Machupicchu Company</title>
-	<link rel="stylesheet" href="../../css/bootstrap.css">
-	<link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="../../css/font-awesome.min.css">
-  <link rel="stylesheet" href="../../css/jquery-ui.min.css">
-  <link rel="icon" type="image/png" href="../../img/icono.gif" />
+	<link rel="stylesheet" href="http://machupicchu.company/css/bootstrap.css">
+	<link rel="stylesheet" href="http://machupicchu.company/css/style.css">
+  <link rel="stylesheet" href="http://machupicchu.company/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://machupicchu.company/css/jquery-ui.min.css">
+  <link rel="icon" type="image/png" href="http://machupicchu.company/img/icono.gif" />
 </head>
 <body class="marca-agua2">
 <div id="fb-root"></div>
@@ -52,15 +52,15 @@ $aux=$fila["idpaquetes"];
 	 <?php include("header.php"); ?>
       <div class="main">
             <div class="trip">
-                  <p ><a href="nosotros.php"><strong class="cabecera-about">ABOUT US</strong></a><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://mapi.pandaninja.com.pe/sidebar.php?id=8">ver detalles</a></p>
+                  <p ><a href="nosotros.php"><strong class="cabecera-about">ABOUT US</strong></a><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://machupicchu.company/sidebar.php?id=8">ver detalles</a></p>
             </div>
       	<header id="header" role="banner" class="paquetes-cabecera row">  
           <div class="col-sm-10"></div>
           <div class=" col-sm-2 grupo-goto">
            <h4>SOMOS PARTE DE</h4>
-           <a href="http://gotoperu.travel/"><img src="http://mapi.pandaninja.com.pe/img/goto.png" alt="" ></a>
+           <a href="http://gotoperu.travel/"><img src="http://machupicchu.company/img/goto.png" alt="" ></a>
            <p>10 años de Experiencia Autorizados por el Gobierno del Peru</p>
-           <a href="http://www.peru.travel/Search-Travel-Services/categoryid/5.aspx"><img src="http://mapi.pandaninja.com.pe/img/marca-peru.jpg" alt=""></a>
+           <a href="http://www.peru.travel/Search-Travel-Services/categoryid/5.aspx"><img src="http://machupicchu.company/img/marca-peru.jpg" alt=""></a>
           </div>
       	</header>
 
@@ -422,7 +422,7 @@ $aux=$fila["idpaquetes"];
                   <li >
                        <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FGOTOPERUcom%2F%3Ffref%3Dts&width=76&layout=box_count&action=like&size=small&show_faces=true&share=false&height=65&appId" width="75" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                   </li>
-                  <li class="compartir" align="center"><a href="http://mapi.pandaninja.com.pe/"><button type="button" class="btn btn-warning color-inicio">inicio</button></a></li>
+                  <li class="compartir" align="center"><a href="http://machupicchu.company/"><button type="button" class="btn btn-warning color-inicio">inicio</button></a></li>
 
             </ul>
 </div>

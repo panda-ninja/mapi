@@ -20,9 +20,9 @@ $con=conectar();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Machupicchu Company</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://machupicchu.company/css/bootstrap.css">
+	<link rel="stylesheet" href="http://machupicchu.company/css/style.css">
+      <link rel="stylesheet" href="http://machupicchu.company/css/font-awesome.min.css">
       <link rel="icon" type="image/png" href="img/icono.gif" />
 
 </head>
@@ -48,7 +48,7 @@ $con=conectar();
 	 </div>-->
       <div class="main">
                   <div class="trip">
-                        <p ><a href="nosotros.php"><strong class="cabecera-about">ABOUT US</strong></a><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://mapi.pandaninja.com.pe/sidebar.php?id=19">ver detalles</a></p>
+                        <p ><a href="nosotros.php"><strong class="cabecera-about">ABOUT US</strong></a><strong>OFERTA DEL MES :</strong> MACHUPICCHU & CUSCO : <strong>4 dias</strong> $499 HOTELES,TOURS,TRENES,TRANSFERS <a href="http://machupicchu.company/sidebar.php?id=19">ver detalles</a></p>
                   </div>
       	<header id="header" role="banner" class="">
                   <div class="row">
