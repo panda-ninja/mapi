@@ -261,7 +261,7 @@ $aux=$fila["idpaquetes"];
 		      		<div>
 		      			<section class="pading-left" >
                                           <div class="nombre-paquete">
-                                                <h3><?php echo $fila["duracion"].' DIAS: '.$fila["titulo"]; ?></h3>
+                                                <h3><?php echo $fila["duracion"].' DIA: '.$fila["titulo"]; ?></h3>
                                           </div>
                                           <p>
                                              <?php 
